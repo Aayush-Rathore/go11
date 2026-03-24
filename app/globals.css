@@ -79,11 +79,29 @@ a {
 }
 
 .header-shell {
+  padding: 0.8rem 0;
+}
+
+.header-bar {
   align-items: center;
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   gap: 0.75rem;
-  grid-template-columns: 1fr;
-  padding: 0.85rem 0;
+}
+
+.top-nav {
+  display: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  box-shadow: var(--shadow);
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  padding: 0.65rem;
+}
+
+.top-nav.is-open {
+  display: grid;
 }
 
 .brand-mark {
@@ -94,27 +112,53 @@ a {
   text-decoration: none;
 }
 
-.top-nav {
-  display: flex;
-  gap: 0.25rem;
-  overflow-x: auto;
-  padding-bottom: 0.1rem;
-  scrollbar-width: thin;
+.menu-toggle {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  color: #1d3946;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  min-height: 2.25rem;
+  padding: 0.35rem 0.65rem;
+}
+
+.menu-icon {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+}
+
+.menu-text {
+  letter-spacing: 0.03em;
 }
 
 .nav-link {
   border-radius: 999px;
   color: var(--muted);
+  display: inline-flex;
   font-size: 0.88rem;
   font-weight: 600;
   padding: 0.4rem 0.7rem;
   text-decoration: none;
-  white-space: nowrap;
+  width: fit-content;
 }
 
 .nav-link:hover {
   background: var(--accent-soft);
   color: var(--accent-strong);
+}
+
+.header-cta {
+  display: none;
+}
+
+.mobile-cta {
+  margin-top: 0.35rem;
+  width: fit-content;
 }
 
 .section {
@@ -468,8 +512,41 @@ a {
 
 @media (min-width: 760px) {
   .header-shell {
+    align-items: center;
     column-gap: 1rem;
+    display: grid;
     grid-template-columns: auto 1fr auto;
+    padding: 0.85rem 0;
+  }
+
+  .header-bar {
+    justify-content: flex-start;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .top-nav,
+  .top-nav.is-open {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .mobile-cta {
+    display: none;
+  }
+
+  .header-cta {
+    display: inline-flex;
   }
 
   .hero-copy {
@@ -498,4 +575,3 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-
