@@ -17,12 +17,25 @@ const CORE_ROUTES = [
   { path: "/blog", changeFrequency: "weekly" as const, priority: 0.84 },
 ];
 
+function buildLanguageAlternates(path: string) {
+  const url = `${SITE_URL}${path}`;
+
+  return {
+    languages: {
+      "en-IN": url,
+      "en-US": url,
+      "x-default": url,
+    },
+  };
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticUrls: MetadataRoute.Sitemap = CORE_ROUTES.map((route) => ({
     url: `${SITE_URL}${route.path}`,
     lastModified: LAST_MODIFIED,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
+    alternates: buildLanguageAlternates(route.path),
   }));
 
   const blogUrls: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
@@ -30,8 +43,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: post.updatedAt,
     changeFrequency: "monthly",
     priority: 0.78,
+    alternates: buildLanguageAlternates(`/blog/${post.slug}`),
   }));
 
   return [...staticUrls, ...blogUrls];
 }
-

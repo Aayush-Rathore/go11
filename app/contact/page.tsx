@@ -5,7 +5,16 @@ import { CtaButtons } from "@/components/cta-buttons";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
-import { AFFILIATE_LINK } from "@/lib/site";
+import {
+  AFFILIATE_LINK,
+  AFFILIATE_REL,
+  BUSINESS_ADDRESS,
+  EXTERNAL_REL,
+  GOOGLE_BUSINESS_PROFILE_URL,
+  SOCIAL_PROFILES,
+  SUPPORT_EMAIL,
+  SUPPORT_PHONE,
+} from "@/lib/site";
 
 const PAGE_TITLE = "Contact and Support - Goplay11 APK Guide";
 const PAGE_DESCRIPTION =
@@ -16,6 +25,14 @@ const SUPPORT_TOPICS = [
   "Login/register sequence support",
   "Referral code onboarding flow",
   "Contest preparation and gameplay basics",
+];
+
+const SOCIAL_ITEMS = [
+  { label: "Facebook", href: SOCIAL_PROFILES.facebook },
+  { label: "X", href: SOCIAL_PROFILES.x },
+  { label: "Instagram", href: SOCIAL_PROFILES.instagram },
+  { label: "YouTube", href: SOCIAL_PROFILES.youtube },
+  { label: "LinkedIn", href: SOCIAL_PROFILES.linkedin },
 ];
 
 export const metadata = buildMetadata({
@@ -81,10 +98,53 @@ export default function ContactPage() {
             </p>
             <p>
               Direct affiliate access:{" "}
-              <a className="text-link" href={AFFILIATE_LINK} rel="noopener noreferrer" target="_blank">
+              <a className="text-link" href={AFFILIATE_LINK} rel={AFFILIATE_REL} target="_blank">
                 Open campaign link
               </a>
             </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="section section-tight">
+        <div className="container two-col">
+          <article className="card">
+            <h2>Business Info (NAP)</h2>
+            <p>
+              Address: {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality},{" "}
+              {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}
+            </p>
+            <p>
+              Phone: <a className="text-link" href={`tel:${SUPPORT_PHONE}`}>{SUPPORT_PHONE}</a>
+            </p>
+            <p>
+              Email: <a className="text-link" href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
+            </p>
+            <p>
+              Set up and optimize your listing at{" "}
+              <a
+                className="text-link"
+                href={GOOGLE_BUSINESS_PROFILE_URL}
+                rel={EXTERNAL_REL}
+                target="_blank"
+              >
+                Google Business Profile
+              </a>
+              .
+            </p>
+          </article>
+
+          <article className="card">
+            <h2>Official Social Profiles</h2>
+            <ul className="tick-list">
+              {SOCIAL_ITEMS.map((item) => (
+                <li key={item.label}>
+                  <a className="text-link" href={item.href} rel={EXTERNAL_REL} target="_blank">
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </article>
         </div>
       </section>
@@ -97,4 +157,3 @@ export default function ContactPage() {
     </>
   );
 }
-

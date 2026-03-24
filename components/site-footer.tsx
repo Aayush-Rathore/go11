@@ -1,6 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 
-import { RECOMMENDED_PLATFORM_URL, SITE_NAME } from "@/lib/site";
+import {
+  BUSINESS_ADDRESS,
+  EXTERNAL_REL,
+  GOOGLE_BUSINESS_PROFILE_URL,
+  LOGO_PATH,
+  RECOMMENDED_PLATFORM_URL,
+  SITE_NAME,
+  SOCIAL_PROFILES,
+  SUPPORT_EMAIL,
+  SUPPORT_PHONE,
+} from "@/lib/site";
 
 const QUICK_LINKS = [
   { href: "/download", label: "Download Goplay11 APK" },
@@ -11,11 +22,22 @@ const QUICK_LINKS = [
 ];
 
 export function SiteFooter() {
+  const socialItems = [
+    { label: "Facebook", href: SOCIAL_PROFILES.facebook },
+    { label: "X", href: SOCIAL_PROFILES.x },
+    { label: "Instagram", href: SOCIAL_PROFILES.instagram },
+    { label: "YouTube", href: SOCIAL_PROFILES.youtube },
+    { label: "LinkedIn", href: SOCIAL_PROFILES.linkedin },
+  ];
+
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
-          <p className="footer-title">{SITE_NAME}</p>
+          <div className="footer-brand">
+            <Image alt={`${SITE_NAME} logo`} className="footer-logo" height={48} src={LOGO_PATH} width={48} />
+            <p className="footer-title">{SITE_NAME}</p>
+          </div>
           <p className="footer-copy">
             SEO-focused resource hub for Goplay11 app download, setup guides, and
             fantasy play strategies.
@@ -37,10 +59,40 @@ export function SiteFooter() {
           <p className="footer-title">Recommended Platform</p>
           <p className="footer-copy">
             Explore{" "}
-            <a href={RECOMMENDED_PLATFORM_URL} rel="noopener noreferrer" target="_blank">
+            <a href={RECOMMENDED_PLATFORM_URL} rel={EXTERNAL_REL} target="_blank">
               comegameapp.com
             </a>{" "}
             for more mobile gaming resources.
+          </p>
+          <p className="footer-copy">
+            Manage your local listing using{" "}
+            <a href={GOOGLE_BUSINESS_PROFILE_URL} rel={EXTERNAL_REL} target="_blank">
+              Google Business Profile
+            </a>
+            .
+          </p>
+          <ul className="footer-list">
+            {socialItems.map((item) => (
+              <li key={item.label}>
+                <a href={item.href} rel={EXTERNAL_REL} target="_blank">
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p className="footer-title">Business Info (NAP)</p>
+          <p className="footer-copy">
+            {SITE_NAME}
+            <br />
+            {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality},{" "}
+            {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}
+            <br />
+            Phone: <a href={`tel:${SUPPORT_PHONE}`}>{SUPPORT_PHONE}</a>
+            <br />
+            Email: <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
           </p>
           <p className="footer-note">
             Play responsibly. Fantasy gaming involves risk and should be used by
@@ -51,4 +103,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-

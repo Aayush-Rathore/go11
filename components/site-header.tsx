@@ -1,9 +1,16 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-import { AFFILIATE_LINK, NAV_LINKS } from "@/lib/site";
+import {
+  AFFILIATE_LINK,
+  AFFILIATE_REL,
+  LOGO_PATH,
+  NAV_LINKS,
+  SITE_NAME,
+} from "@/lib/site";
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,8 +21,19 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container header-shell">
         <div className="header-bar">
-          <Link className="brand-mark" href="/">
-            Goplay11 APK
+          <Link className="brand-mark" href="/" onClick={closeMenu}>
+            <Image
+              alt={`${SITE_NAME} logo`}
+              className="brand-logo"
+              height={44}
+              priority
+              src={LOGO_PATH}
+              width={44}
+            />
+            <span className="brand-text-wrap">
+              <span className="brand-name">{SITE_NAME}</span>
+              <span className="brand-tag">Fantasy Gaming Resource Hub</span>
+            </span>
           </Link>
           <button
             aria-controls="primary-navigation"
@@ -50,7 +68,7 @@ export function SiteHeader() {
           <a
             className="btn btn-primary btn-compact mobile-cta"
             href={AFFILIATE_LINK}
-            rel="noopener noreferrer"
+            rel={AFFILIATE_REL}
             target="_blank"
           >
             Download APK
@@ -60,7 +78,7 @@ export function SiteHeader() {
         <a
           className="btn btn-primary btn-compact header-cta"
           href={AFFILIATE_LINK}
-          rel="noopener noreferrer"
+          rel={AFFILIATE_REL}
           target="_blank"
         >
           Download APK

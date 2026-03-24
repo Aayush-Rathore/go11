@@ -1,4 +1,4 @@
-import { AFFILIATE_LINK } from "@/lib/site";
+import { AFFILIATE_LINK, AFFILIATE_REL } from "@/lib/site";
 
 type CtaButtonsProps = {
   className?: string;
@@ -27,7 +27,7 @@ export function CtaButtons({ className }: CtaButtonsProps) {
           key={item.label}
           className={item.className}
           href={AFFILIATE_LINK}
-          rel="noopener noreferrer"
+          rel={AFFILIATE_REL}
           target="_blank"
         >
           {item.label}
@@ -36,4 +36,3 @@ export function CtaButtons({ className }: CtaButtonsProps) {
     </div>
   );
 }
-

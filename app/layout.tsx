@@ -1,14 +1,23 @@
 import type { Metadata } from "next";
 
+import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StickyCta } from "@/components/sticky-cta";
+import { TrackingScripts } from "@/components/tracking-scripts";
+import {
+  buildLocalBusinessSchema,
+  buildOrganizationSchema,
+  buildWebsiteSchema,
+} from "@/lib/seo";
 import {
   DEFAULT_DESCRIPTION,
   DEFAULT_TITLE,
+  LOGO_PATH,
   LONG_TAIL_KEYWORDS,
   PRIMARY_KEYWORDS,
   SECONDARY_KEYWORDS,
+  SOCIAL_PROFILES,
   SITE_NAME,
   SITE_URL,
 } from "@/lib/site";
@@ -22,12 +31,26 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: DEFAULT_TITLE,
-    template: "%s | Goplay11 APK",
+    template: "%s | Goplay11",
   },
   description: DEFAULT_DESCRIPTION,
   keywords: GLOBAL_KEYWORDS,
+  authors: [{ name: "GO11 Editorial Team", url: SITE_URL }],
+  creator: "GO11 Editorial Team",
+  publisher: SITE_NAME,
+  applicationName: SITE_NAME,
   alternates: {
     canonical: SITE_URL,
+    languages: {
+      "en-IN": SITE_URL,
+      "en-US": SITE_URL,
+      "x-default": SITE_URL,
+    },
+  },
+  icons: {
+    icon: LOGO_PATH,
+    apple: LOGO_PATH,
+    shortcut: LOGO_PATH,
   },
   openGraph: {
     title: DEFAULT_TITLE,
@@ -38,10 +61,10 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/logo.svg",
-        width: 512,
-        height: 512,
-        alt: "Goplay11 app download logo",
+        url: LOGO_PATH,
+        width: 1200,
+        height: 1200,
+        alt: "GO11 logo",
       },
     ],
   },
@@ -49,7 +72,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
-    images: ["/logo.svg"],
+    images: [LOGO_PATH],
+    creator: "@goplay11apk",
+  },
+  other: {
+    "facebook:profile": SOCIAL_PROFILES.facebook,
+    "instagram:profile": SOCIAL_PROFILES.instagram,
+    "linkedin:profile": SOCIAL_PROFILES.linkedin,
+    "youtube:profile": SOCIAL_PROFILES.youtube,
   },
 };
 
@@ -61,10 +91,14 @@ export default function RootLayout({
   return (
     <html lang="en-IN" className="h-full antialiased">
       <body className="site-body">
+        <JsonLd data={buildOrganizationSchema()} />
+        <JsonLd data={buildLocalBusinessSchema()} />
+        <JsonLd data={buildWebsiteSchema()} />
         <SiteHeader />
         <main className="site-main">{children}</main>
         <SiteFooter />
         <StickyCta />
+        <TrackingScripts />
       </body>
     </html>
   );

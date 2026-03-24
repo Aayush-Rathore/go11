@@ -2,13 +2,19 @@ import type { Metadata } from "next";
 
 import {
   AFFILIATE_LINK,
+  BUSINESS_ADDRESS,
+  BUSINESS_NAME,
   DEFAULT_DESCRIPTION,
   DEFAULT_TITLE,
+  LOGO_PATH,
   LONG_TAIL_KEYWORDS,
   PRIMARY_KEYWORDS,
+  SOCIAL_PROFILE_LINKS,
   SECONDARY_KEYWORDS,
   SITE_NAME,
   SITE_URL,
+  SUPPORT_EMAIL,
+  SUPPORT_PHONE,
   type FaqItem,
 } from "@/lib/site";
 
@@ -36,6 +42,12 @@ type ArticleSchemaOptions = {
 const ALL_KEYWORDS = Array.from(
   new Set([...PRIMARY_KEYWORDS, ...SECONDARY_KEYWORDS, ...LONG_TAIL_KEYWORDS]),
 );
+const TITLE_MAX_LENGTH = 60;
+const DESCRIPTION_MAX_LENGTH = 155;
+
+const ORGANIZATION_ID = `${SITE_URL}#organization`;
+const LOCAL_BUSINESS_ID = `${SITE_URL}#local-business`;
+const WEBSITE_ID = `${SITE_URL}#website`;
 
 function absoluteUrl(path: string): string {
   if (path.startsWith("http://") || path.startsWith("https://")) {
@@ -49,9 +61,32 @@ function absoluteUrl(path: string): string {
   return `${SITE_URL}/${path}`;
 }
 
+function clampText(value: string, maxLength: number): string {
+  if (value.length <= maxLength) {
+    return value;
+  }
+
+  const maxCoreLength = Math.max(maxLength - 3, 1);
+  const core = value.slice(0, maxCoreLength);
+  const wordSafe = core.replace(/\s+\S*$/, "").trimEnd();
+  const normalizedCore = wordSafe.length >= 24 ? wordSafe : core.trimEnd();
+  return `${normalizedCore}...`;
+}
+
+function buildLanguageAlternates(url: string) {
+  return {
+    "en-IN": url,
+    "en-US": url,
+    "x-default": url,
+  };
+}
+
 export function buildMetadata(options: MetadataOptions = {}): Metadata {
-  const title = options.title ?? DEFAULT_TITLE;
-  const description = options.description ?? DEFAULT_DESCRIPTION;
+  const title = clampText(options.title ?? DEFAULT_TITLE, TITLE_MAX_LENGTH);
+  const description = clampText(
+    options.description ?? DEFAULT_DESCRIPTION,
+    DESCRIPTION_MAX_LENGTH,
+  );
   const url = absoluteUrl(options.path ?? "/");
   const keywords = Array.from(new Set([...(options.keywords ?? []), ...ALL_KEYWORDS]));
 
@@ -61,6 +96,7 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
     keywords,
     alternates: {
       canonical: url,
+      languages: buildLanguageAlternates(url),
     },
     openGraph: {
       type: options.openGraphType ?? "website",
@@ -71,9 +107,9 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
       locale: "en_IN",
       images: [
         {
-          url: `${SITE_URL}/logo.svg`,
-          width: 512,
-          height: 512,
+          url: `${SITE_URL}${LOGO_PATH}`,
+          width: 1200,
+          height: 1200,
           alt: "Goplay11 app download",
         },
       ],
@@ -82,7 +118,7 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
       card: "summary_large_image",
       title,
       description,
-      images: [`${SITE_URL}/logo.svg`],
+      images: [`${SITE_URL}${LOGO_PATH}`],
     },
     robots: {
       index: true,
@@ -129,6 +165,10 @@ export function buildSoftwareApplicationSchema(description: string, path: string
     description,
     url: absoluteUrl(path),
     downloadUrl: AFFILIATE_LINK,
+    image: `${SITE_URL}${LOGO_PATH}`,
+    publisher: {
+      "@id": ORGANIZATION_ID,
+    },
     offers: {
       "@type": "Offer",
       price: "0",
@@ -148,10 +188,70 @@ export function buildArticleSchema(options: ArticleSchemaOptions) {
     datePublished: options.datePublished,
     dateModified: options.dateModified,
     publisher: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
+      "@id": ORGANIZATION_ID,
     },
   };
 }
 
+export function buildOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": ORGANIZATION_ID,
+    name: SITE_NAME,
+    legalName: BUSINESS_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}${LOGO_PATH}`,
+    sameAs: SOCIAL_PROFILE_LINKS,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: SUPPORT_PHONE,
+        contactType: "customer support",
+        email: SUPPORT_EMAIL,
+        areaServed: "IN",
+        availableLanguage: ["en", "hi"],
+      },
+    ],
+  };
+}
+
+export function buildLocalBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": LOCAL_BUSINESS_ID,
+    name: BUSINESS_NAME,
+    url: SITE_URL,
+    image: `${SITE_URL}${LOGO_PATH}`,
+    telephone: SUPPORT_PHONE,
+    email: SUPPORT_EMAIL,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: BUSINESS_ADDRESS.streetAddress,
+      addressLocality: BUSINESS_ADDRESS.addressLocality,
+      addressRegion: BUSINESS_ADDRESS.addressRegion,
+      postalCode: BUSINESS_ADDRESS.postalCode,
+      addressCountry: BUSINESS_ADDRESS.addressCountry,
+    },
+    areaServed: "India",
+    parentOrganization: {
+      "@id": ORGANIZATION_ID,
+    },
+    sameAs: SOCIAL_PROFILE_LINKS,
+  };
+}
+
+export function buildWebsiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": WEBSITE_ID,
+    name: SITE_NAME,
+    url: SITE_URL,
+    inLanguage: ["en-IN", "en-US"],
+    publisher: {
+      "@id": ORGANIZATION_ID,
+    },
+  };
+}

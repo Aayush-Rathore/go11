@@ -1,0 +1,37 @@
+# GO11 Fantasy Gaming Resource Hub
+
+> Canonical site: https://goplay11-apk.com
+
+## Site purpose
+- Help users download Goplay11 APK safely.
+- Explain onboarding, referral flow, and fantasy strategy basics.
+- Provide responsible play and account safety guidance.
+
+## Priority pages
+- /
+- /download
+- /apk
+- /login-register
+- /referral-code
+- /how-to-play
+- /blog
+- /contact
+
+## Key entities
+- Brand: Goplay11 APK / GO11
+- Topic: Fantasy gaming and Android app onboarding
+- Region: India
+
+## Structured data available
+- Organization
+- LocalBusiness
+- WebSite
+- SoftwareApplication
+- FAQPage
+- BreadcrumbList
+- Article
+
+## Policy and trust notes
+- Use official links and trusted APK sources only.
+- Verify permissions before installation.
+- Follow responsible bankroll and contest risk controls.

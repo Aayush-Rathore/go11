@@ -105,11 +105,36 @@ a {
 }
 
 .brand-mark {
+  align-items: center;
   color: #0a1820;
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
+  display: inline-flex;
+  gap: 0.55rem;
   text-decoration: none;
+}
+
+.brand-logo {
+  border-radius: 0.55rem;
+  box-shadow: 0 8px 18px -12px rgba(12, 32, 45, 0.8);
+}
+
+.brand-text-wrap {
+  display: grid;
+  line-height: 1.05;
+}
+
+.brand-name {
+  font-size: 1.02rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.brand-tag {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-top: 0.14rem;
+  text-transform: uppercase;
 }
 
 .menu-toggle {
@@ -424,11 +449,22 @@ a {
   gap: 1.25rem;
 }
 
+.footer-brand {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.55rem;
+  margin-bottom: 0.45rem;
+}
+
+.footer-logo {
+  border-radius: 0.5rem;
+}
+
 .footer-title {
   color: #f5fbff;
   font-size: 1rem;
   font-weight: 800;
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.35rem;
 }
 
 .footer-copy {
@@ -566,7 +602,7 @@ a {
   }
 
   .footer-grid {
-    grid-template-columns: 1.2fr 0.85fr 1fr;
+    grid-template-columns: 1.2fr 0.85fr 0.85fr 1fr;
   }
 }
 

@@ -5,7 +5,7 @@ import { CtaButtons } from "@/components/cta-buttons";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
-import { RECOMMENDED_PLATFORM_URL } from "@/lib/site";
+import { EXTERNAL_REL, RECOMMENDED_PLATFORM_URL } from "@/lib/site";
 
 const PAGE_TITLE = "About Goplay11 APK Resource Hub";
 const PAGE_DESCRIPTION =
@@ -59,7 +59,7 @@ export default function AboutPage() {
             <a
               className="text-link"
               href={RECOMMENDED_PLATFORM_URL}
-              rel="noopener noreferrer"
+              rel={EXTERNAL_REL}
               target="_blank"
             >
               comegameapp.com
@@ -78,4 +78,3 @@ export default function AboutPage() {
     </>
   );
 }
-

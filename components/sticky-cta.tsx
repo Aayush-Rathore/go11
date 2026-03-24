@@ -1,4 +1,4 @@
-import { AFFILIATE_LINK } from "@/lib/site";
+import { AFFILIATE_LINK, AFFILIATE_REL } from "@/lib/site";
 
 export function StickyCta() {
   return (
@@ -10,7 +10,7 @@ export function StickyCta() {
         <a
           className="btn btn-primary"
           href={AFFILIATE_LINK}
-          rel="noopener noreferrer"
+          rel={AFFILIATE_REL}
           target="_blank"
         >
           Download Goplay11 APK
@@ -19,4 +19,3 @@ export function StickyCta() {
     </div>
   );
 }
-
