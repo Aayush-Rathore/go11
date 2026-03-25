@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { BreadcrumbTrail } from "@/components/breadcrumb-trail";
@@ -12,120 +13,153 @@ import {
   buildSoftwareApplicationSchema,
 } from "@/lib/seo";
 
-const PAGE_TITLE = "Goplay11 App Download - Play Fantasy Games and Win Rewards";
+const PAGE_TITLE = "Goplay11 App Download - Play Fantasy Games & Win Rewards";
 const PAGE_DESCRIPTION =
-  "Download the latest Goplay11 APK, complete setup in minutes, and start playing fantasy contests with a smooth user-friendly flow.";
+  "Goplay11 is an exciting online fantasy gaming platform where users can create teams, play contests, and win rewards using skills and strategy.";
+
+const META_TITLE = "Goplay11 APK App Download - India's No.1 Trusted Fantasy";
+const META_DESCRIPTION =
+  "Download Goplay11 APK app and enjoy fantasy gaming. Play contests, create teams, and win rewards on India's trusted gaming platform, now live.";
 
 const APP_INFO = [
   "App Name: Goplay11",
   "Version: Latest 2026",
-  "File Size: Lightweight APK",
-  "Compatibility: Android devices",
+  "Size: Lightweight APK",
+  "Compatibility: Android Devices",
 ];
 
 const ABOUT_POINTS = [
-  "Create your dream team with real match players",
-  "Join multiple contests based on your budget",
-  "Compete with real players in skill-based formats",
-  "Track live match performance and team points",
+  "Create your dream team",
+  "Join multiple contests",
+  "Compete with real players",
+  "Track live performance",
 ];
 
 const FEATURE_POINTS = [
-  "Easy-to-use interface for quick navigation",
-  "Multiple game options across fantasy categories",
-  "Fast withdrawals with secure processing",
-  "Safe platform with user-data protection focus",
-  "24/7 support for onboarding and account help",
+  "Easy-to-use interface with clean navigation",
+  "Multiple games including fantasy and prediction contests",
+  "Fast and secure withdrawals",
+  "Safe platform with user data protection",
+  "24/7 support for user help",
 ];
 
 const REGISTER_STEPS = [
-  "Download and install the Goplay11 APK.",
-  "Open the app and tap Register or Sign Up.",
-  "Enter your mobile number or email details.",
-  "Set a password and verify via OTP.",
-  "Complete profile details to activate your account.",
+  "Download the Goplay11 APK.",
+  "Install the app on your device.",
+  "Open the app and tap Register / Sign Up.",
+  "Enter mobile number or email.",
+  "Set password and verify OTP.",
+  "Account successfully created.",
 ];
 
 const LOGIN_STEPS = [
-  "Open the Goplay11 app and tap Login.",
-  "Enter your registered mobile number or email.",
-  "Enter your account password.",
-  "Access your dashboard and contest lobby.",
+  "Open the Goplay11 app.",
+  "Click Login.",
+  "Enter your registered mobile/email.",
+  "Enter password.",
+  "Click login button and access dashboard.",
 ];
 
 const DOWNLOAD_STEPS = [
-  "Visit the trusted download source.",
-  "Tap the Download Goplay11 App button.",
-  "Allow installation from trusted sources on Android.",
-  "Install the APK and open the app.",
-  "Create your team and start joining contests.",
+  "Visit your website.",
+  "Click Download GoPlay11 App button.",
+  "APK file starts downloading.",
+  "Enable Unknown Sources in Android settings.",
+  "Install the APK, open app, and start playing.",
 ];
 
 const PLAY_STEPS = [
-  "Select a live or upcoming match.",
-  "Create your fantasy team with balanced roles.",
-  "Join one or more contests.",
-  "Earn points from real player performance.",
-  "Win rewards based on leaderboard rank.",
+  "Select a match.",
+  "Create your team.",
+  "Join contests.",
+  "Earn points based on performance.",
+  "Win rewards.",
 ];
 
 const WHY_POINTS = [
-  "Trusted fantasy gaming experience",
-  "Smooth gameplay for beginners and regular users",
-  "Multiple earning opportunities through contests",
-  "Regular updates with feature improvements",
+  "Trusted gaming platform",
+  "Smooth gameplay experience",
+  "Beginner-friendly interface",
+  "Multiple earning opportunities",
+  "Regular updates",
 ];
 
 const PROS = [
-  "Easy registration process",
-  "Fast gameplay and simple entry flow",
-  "Multiple contest options",
-  "Beginner-friendly interface",
+  "Easy registration",
+  "Fast gameplay",
+  "Multiple contests",
+  "User-friendly experience",
 ];
 
 const CONS = [
-  "Requires stable internet connection",
-  "Needs skill learning for consistent results",
+  "Requires internet connection",
+  "Skill-based learning is needed",
+];
+
+const SCREENSHOTS = [
+  {
+    src: "/goplay11-1.jpeg",
+    alt: "goplay11 app home screen interface",
+  },
+  {
+    src: "/goplay11-2.jpeg",
+    alt: "goplay11 fantasy game dashboard",
+  },
+  {
+    src: "/goplay11-3.jpeg",
+    alt: "goplay11 login and register page",
+  },
+  {
+    src: "/goplay11-4.jpeg",
+    alt: "goplay11 app gameplay screen",
+  },
+  {
+    src: "/goplay11-5.jpeg",
+    alt: "goplay11 apk install guide screen",
+  },
 ];
 
 const PAGE_FAQS = [
   {
     question: "What is Goplay11?",
     answer:
-      "Goplay11 is an online fantasy gaming platform where users can create teams, join contests, and win rewards based on match performance.",
+      "Goplay11 is an online fantasy gaming platform where users can play contests and win rewards.",
   },
   {
     question: "Is Goplay11 app free to download?",
-    answer:
-      "Yes, the Goplay11 app download process is free. Users can install the APK and then choose free or paid contest formats.",
+    answer: "Yes, the Goplay11 app download is completely free.",
   },
   {
-    question: "How do I download the Goplay11 app?",
+    question: "How to download GoPlay App?",
     answer:
-      "Use the official download page, install the APK on Android, finish registration, and then access contests from your dashboard.",
+      "You can download the Goplay11 APK directly from the official website and install it on Android.",
   },
   {
-    question: "Is Goplay11 safe to use?",
+    question: "Is Goplay11 safe?",
     answer:
-      "The platform is positioned with secure systems and account protection controls. Always use trusted links and review permissions before install.",
+      "The platform uses secure systems to protect user data. Always use trusted sources for APK download.",
   },
   {
     question: "Can beginners play Goplay11?",
-    answer:
-      "Yes. The interface is beginner-friendly, and users can start with lower-risk contests while learning scoring and lineup basics.",
+    answer: "Yes, Goplay11 is beginner-friendly and supports a simple onboarding flow.",
   },
 ];
 
 export const metadata = buildMetadata({
-  title: PAGE_TITLE,
-  description: PAGE_DESCRIPTION,
+  title: META_TITLE,
+  description: META_DESCRIPTION,
   path: "/goplay11-app-download",
   keywords: [
+    "goplay11",
+    "goplay11 apk",
+    "goplay11 app",
     "goplay11 app download",
+    "goplay11 game",
+    "goplay11 games",
+    "goplay11 apk download",
+    "go play11 app",
     "download goplay11 apk for android",
-    "goplay11 app latest version",
-    "goplay11 register",
-    "goplay11 login",
+    "download goplay11 app",
   ],
 });
 
@@ -144,7 +178,7 @@ export default function Goplay11AppDownloadPage() {
       <JsonLd data={buildFaqSchema(PAGE_FAQS)} />
 
       <PageHero
-        eyebrow="Download Resource"
+        eyebrow="Official Download Guide"
         title={PAGE_TITLE}
         description={PAGE_DESCRIPTION}
       >
@@ -158,8 +192,21 @@ export default function Goplay11AppDownloadPage() {
       </PageHero>
 
       <section className="section section-tight">
+        <div className="container card content-stack">
+          <p>
+            The GoPlay App offers a smooth and user-friendly experience for both
+            beginners and experienced players.
+          </p>
+          <p>
+            If you are looking for the Goplay11 app download, install the latest
+            Goplay11 APK and start playing instantly.
+          </p>
+        </div>
+      </section>
+
+      <section className="section section-tight">
         <div className="container card">
-          <h2>Goplay11 App Snapshot</h2>
+          <h2>Download Goplay11 APK</h2>
           <div className="badge-row">
             {APP_INFO.map((item) => (
               <div className="badge" key={item}>
@@ -175,8 +222,12 @@ export default function Goplay11AppDownloadPage() {
           <article className="card">
             <h2>About Goplay11 App</h2>
             <p>
-              Goplay11 is built for users who enjoy fantasy gaming, strategy, and
-              competitive match-day decisions.
+              The Goplay11 app is designed for users who love online fantasy sports
+              and skill-based games.
+            </p>
+            <p>
+              Fantasy apps let users build teams and earn points from real match
+              performance, creating a competitive and interactive experience.
             </p>
             <ul className="tick-list">
               {ABOUT_POINTS.map((item) => (
@@ -186,7 +237,7 @@ export default function Goplay11AppDownloadPage() {
           </article>
 
           <article className="card">
-            <h2>Core Features</h2>
+            <h2>Features of Goplay11</h2>
             <ul className="tick-list">
               {FEATURE_POINTS.map((item) => (
                 <li key={item}>{item}</li>
@@ -243,7 +294,7 @@ export default function Goplay11AppDownloadPage() {
       <section className="section section-tight">
         <div className="container two-col">
           <article className="card">
-            <h2>Why Choose Goplay11</h2>
+            <h2>Why Choose Goplay11?</h2>
             <ul className="tick-list">
               {WHY_POINTS.map((item) => (
                 <li key={item}>{item}</li>
@@ -270,21 +321,40 @@ export default function Goplay11AppDownloadPage() {
       </section>
 
       <section className="section section-tight">
+        <div className="container">
+          <h2>Goplay11 App Screens</h2>
+          <div className="card-grid">
+            {SCREENSHOTS.map((shot) => (
+              <article className="card" key={shot.alt}>
+                <Image
+                  alt={shot.alt}
+                  className="logo-image"
+                  height={1200}
+                  src={shot.src}
+                  width={540}
+                />
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-tight">
         <div className="container card">
-          <h2>Continue with Fantasy Strategy and Rewards</h2>
+          <h2>Related Guides</h2>
           <p>
-            After installation, review the{" "}
+            Continue with{" "}
             <Link className="text-link" href="/goplay11-fantasy-app">
-              Goplay11 fantasy app strategy page
+              Goplay11 fantasy app
             </Link>{" "}
-            for winning tips and contest planning.
+            for contest strategy and reward planning.
           </p>
           <p>
-            For referral onboarding, use the{" "}
-            <Link className="text-link" href="/referral-code">
-              Goplay11 referral code
+            New users can also check{" "}
+            <Link className="text-link" href="/login-register">
+              Goplay11 login and register guide
             </Link>{" "}
-            guide before your first paid contest entry.
+            before joining contests.
           </p>
         </div>
       </section>
