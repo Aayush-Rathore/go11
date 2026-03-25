@@ -13,10 +13,10 @@ import {
 import {
   DEFAULT_DESCRIPTION,
   DEFAULT_TITLE,
-  LOGO_PATH,
   LONG_TAIL_KEYWORDS,
   PRIMARY_KEYWORDS,
   SECONDARY_KEYWORDS,
+  SOCIAL_PREVIEW_PATH,
   SOCIAL_PROFILES,
   SITE_NAME,
   SITE_URL,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: DEFAULT_TITLE,
-    template: "%s | Goplay11",
+    template: "%s | GoPlay11",
   },
   description: DEFAULT_DESCRIPTION,
   keywords: GLOBAL_KEYWORDS,
@@ -56,10 +56,10 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: LOGO_PATH,
+        url: SOCIAL_PREVIEW_PATH,
         width: 1200,
-        height: 1200,
-        alt: "GO11 logo",
+        height: 630,
+        alt: "GoPlay11 Fantasy Cricket App",
       },
     ],
   },
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
-    images: [LOGO_PATH],
+    images: [SOCIAL_PREVIEW_PATH],
     creator: "@goplay11apk",
   },
   other: {

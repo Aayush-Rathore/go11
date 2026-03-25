@@ -9,6 +9,7 @@ import {
   LOGO_PATH,
   LONG_TAIL_KEYWORDS,
   PRIMARY_KEYWORDS,
+  SOCIAL_PREVIEW_PATH,
   SOCIAL_PROFILE_LINKS,
   SECONDARY_KEYWORDS,
   SITE_NAME,
@@ -107,10 +108,10 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
       locale: "en_IN",
       images: [
         {
-          url: `${SITE_URL}${LOGO_PATH}`,
+          url: `${SITE_URL}${SOCIAL_PREVIEW_PATH}`,
           width: 1200,
-          height: 1200,
-          alt: "Goplay11 app download",
+          height: 630,
+          alt: "GoPlay11 Fantasy Cricket App",
         },
       ],
     },
@@ -118,7 +119,7 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
       card: "summary_large_image",
       title,
       description,
-      images: [`${SITE_URL}${LOGO_PATH}`],
+      images: [`${SITE_URL}${SOCIAL_PREVIEW_PATH}`],
     },
     robots: {
       index: true,
@@ -159,7 +160,8 @@ export function buildSoftwareApplicationSchema(description: string, path: string
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Goplay11 Fantasy App",
+    name: "GoPlay11 (Go Play 11) Fantasy App",
+    alternateName: ["Go Play 11", "Go Play 11 APK", "GoPlay11 APK"],
     applicationCategory: "GameApplication",
     operatingSystem: "Android",
     description,

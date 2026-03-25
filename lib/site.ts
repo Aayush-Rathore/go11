@@ -1,6 +1,7 @@
-export const SITE_NAME = "Goplay11 APK";
+export const SITE_NAME = "GoPlay11 APK";
 export const SITE_URL = "https://goplay11-apk.com";
 export const LOGO_PATH = "/go11.png";
+export const SOCIAL_PREVIEW_PATH = "/social-preview.jpg";
 
 export const AFFILIATE_LINK =
   "https://web-in.goplaycom.com/en/affiliate-invited?c=6FHW28S2&s=3";
@@ -8,9 +9,9 @@ export const RECOMMENDED_PLATFORM_URL = "https://www.comegameapp.com";
 export const AFFILIATE_REL = "nofollow sponsored noopener noreferrer";
 export const EXTERNAL_REL = "nofollow noopener noreferrer";
 
-export const DEFAULT_TITLE = "Goplay11 APK Download and Fantasy Gaming Guide";
+export const DEFAULT_TITLE = "Go Play 11 APK Download and GoPlay11 Fantasy Guide";
 export const DEFAULT_DESCRIPTION =
-  "Download Goplay11 APK, compare fantasy contest formats, and use expert strategy tips to play smarter, safer, and more consistently in 2026.";
+  "Go Play 11 APK download guide for users searching GoPlay11, Go Play 11 APK, and Go Play 11 APK download. Get setup steps, login help, and fantasy strategy tips in 2026.";
 
 export const BUSINESS_NAME = "GO11 Fantasy Media";
 export const SUPPORT_PHONE = "+91-80456-77881";
@@ -36,12 +37,23 @@ export const SOCIAL_PROFILES = {
 export const SOCIAL_PROFILE_LINKS = Object.values(SOCIAL_PROFILES);
 
 export const PRIMARY_KEYWORDS = [
+  "go play 11",
+  "go play 11 apk",
+  "go play 11 apk download",
+  "goplay11",
   "goplay11 app download",
   "goplay11 apk",
   "goplay11 fantasy app",
 ];
 
 export const SECONDARY_KEYWORDS = [
+  "go play11",
+  "goplay 11",
+  "go play11 apk",
+  "goplay 11 apk",
+  "goplay11 apk download",
+  "go play11 apk download",
+  "goplay 11 apk download",
   "goplay11 login",
   "goplay11 register",
   "goplay11 referral code",
@@ -50,6 +62,9 @@ export const SECONDARY_KEYWORDS = [
 ];
 
 export const LONG_TAIL_KEYWORDS = [
+  "go play 11 apk latest version 2026",
+  "go play 11 app download",
+  "go play 11 fantasy app",
   "download goplay11 apk latest version 2026",
   "how to play goplay11 fantasy app",
   "is goplay11 safe or real",
@@ -77,9 +92,9 @@ export type FaqItem = {
 
 export const HOME_FAQS: FaqItem[] = [
   {
-    question: "How do I complete the Goplay11 APK download quickly?",
+    question: "How do I complete the Go Play 11 APK download quickly?",
     answer:
-      "Use the official download page, allow trusted installs on Android, and finish registration before match lock to avoid missing contest entry windows.",
+      "Use the official GoPlay11 download page, allow trusted installs on Android, and finish registration before match lock to avoid missing contest entry windows.",
   },
   {
     question: "Is Goplay11 safe or real for fantasy players in India?",

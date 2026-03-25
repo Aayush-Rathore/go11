@@ -98,6 +98,11 @@ const TICKER_ITEMS = [
 
 const FAQ_ITEMS = [
   {
+    question: "How do I complete Go Play 11 APK download?",
+    answer:
+      "Use the official GoPlay11 download link on this site. If you search for Go Play 11 APK or Go Play 11 APK download, always choose trusted sources only.",
+  },
+  {
     question: "Is GoPlay11 legal?",
     answer:
       "GoPlay11 is positioned as a skill-based fantasy platform. Always verify local regulations before playing.",
@@ -182,6 +187,10 @@ export function Pick11HomePage({
             <h1 className="pick11-hero-title">GoPlay11</h1>
             <p className="pick11-hero-desc">
               Create your dream team, join contests, and win daily with GoPlay11.
+            </p>
+            <p className="pick11-hero-search-terms">
+              Also searched as: Go Play 11, Go Play 11 APK, and Go Play 11 APK
+              download.
             </p>
             <div className="pick11-hero-chip-row">
               {HERO_HIGHLIGHTS.map((highlight) => (

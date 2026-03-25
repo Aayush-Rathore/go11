@@ -1033,6 +1033,14 @@ body.home-template-active .site-main {
   max-width: 40rem;
 }
 
+.pick11-hero-search-terms {
+  color: rgba(226, 236, 250, 0.88);
+  font-size: 0.86rem;
+  letter-spacing: 0.01em;
+  margin: 0 0 1.1rem;
+  max-width: 42rem;
+}
+
 .pick11-hero-chip-row {
   display: flex;
   flex-wrap: wrap;
