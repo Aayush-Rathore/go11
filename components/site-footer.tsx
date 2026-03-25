@@ -15,6 +15,8 @@ import {
 
 const QUICK_LINKS = [
   { href: "/download", label: "Download Goplay11 APK" },
+  { href: "/goplay11-app-download", label: "Goplay11 App Download Guide" },
+  { href: "/goplay11-fantasy-app", label: "Goplay11 Fantasy App Guide" },
   { href: "/apk", label: "Goplay11 APK Guide" },
   { href: "/how-to-play", label: "Play fantasy games online" },
   { href: "/referral-code", label: "Goplay11 referral code" },

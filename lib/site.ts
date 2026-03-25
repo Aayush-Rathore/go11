@@ -46,22 +46,26 @@ export const SECONDARY_KEYWORDS = [
   "goplay11 register",
   "goplay11 referral code",
   "goplay11 app latest version",
+  "goplay11 games",
 ];
 
 export const LONG_TAIL_KEYWORDS = [
   "download goplay11 apk latest version 2026",
   "how to play goplay11 fantasy app",
   "is goplay11 safe or real",
+  "download goplay11 apk for android",
+  "goplay11 fantasy app play smart and win big",
 ];
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/download", label: "Download" },
+  { href: "/goplay11-app-download", label: "App Download" },
+  { href: "/goplay11-fantasy-app", label: "Fantasy App" },
   { href: "/apk", label: "APK" },
   { href: "/how-to-play", label: "How To Play" },
   { href: "/login-register", label: "Login/Register" },
   { href: "/referral-code", label: "Referral Code" },
-  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/blog", label: "Blog" },
 ];

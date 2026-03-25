@@ -47,11 +47,6 @@ export const metadata: Metadata = {
       "x-default": SITE_URL,
     },
   },
-  icons: {
-    icon: LOGO_PATH,
-    apple: LOGO_PATH,
-    shortcut: LOGO_PATH,
-  },
   openGraph: {
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
