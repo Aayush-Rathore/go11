@@ -6,7 +6,7 @@ import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { buildBreadcrumbSchema, buildFaqSchema, buildMetadata } from "@/lib/seo";
-import { REFERRAL_FAQS } from "@/lib/site";
+import { CONTENT_LAST_REVIEWED, REFERRAL_FAQS } from "@/lib/site";
 
 const PAGE_TITLE = "Goplay11 Referral Code - Earn Bonus Instantly";
 const PAGE_DESCRIPTION =
@@ -50,6 +50,7 @@ export default function ReferralCodePage() {
         <div className="ref-code-box">
           Campaign code in affiliate link: <code>6FHW28S2</code>
         </div>
+        <p className="lead-muted">Bonus flow guide reviewed on {CONTENT_LAST_REVIEWED}</p>
         <CtaButtons />
       </PageHero>
 
@@ -82,6 +83,13 @@ export default function ReferralCodePage() {
             and then return here before your first contest to make sure your bonus
             field is not skipped.
           </p>
+          <p>
+            For transparency on our update and verification process, visit{" "}
+            <Link className="text-link" href="/editorial-policy">
+              Editorial Policy
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
@@ -89,4 +97,3 @@ export default function ReferralCodePage() {
     </>
   );
 }
-

@@ -57,6 +57,7 @@ export default function BlogIndexPage() {
           {posts.map((post) => (
             <article className="blog-card" key={post.slug}>
               <p className="meta">Updated: {formatDate(post.updatedAt)}</p>
+              <p className="meta">By: {post.author ?? "GoPlay11 Editorial Team"}</p>
               <h2>
                 <Link className="text-link" href={`/blog/${post.slug}`}>
                   {post.title}

@@ -14,11 +14,14 @@ import {
 } from "@/lib/site";
 
 const QUICK_LINKS = [
+  { href: "/about", label: "About GoPlay11 APK Resource Hub" },
+  { href: "/editorial-policy", label: "Editorial Policy and Review Process" },
   { href: "/download", label: "Download Goplay11 APK" },
   { href: "/goplay11-app-download", label: "Goplay11 App Download Guide" },
   { href: "/goplay11-fantasy-app", label: "Goplay11 Fantasy App Guide" },
   { href: "/apk", label: "Goplay11 APK Guide" },
   { href: "/how-to-play", label: "Play fantasy games online" },
+  { href: "/responsible-play", label: "Responsible play checklist" },
   { href: "/referral-code", label: "Goplay11 referral code" },
   { href: "/blog", label: "Fantasy blog" },
 ];

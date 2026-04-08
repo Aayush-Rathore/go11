@@ -5,6 +5,7 @@ import { CtaButtons } from "@/components/cta-buttons";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
+import { CONTENT_LAST_REVIEWED } from "@/lib/site";
 
 const PAGE_TITLE = "How to Play Goplay11 Fantasy App";
 const PAGE_DESCRIPTION =
@@ -53,6 +54,7 @@ export default function HowToPlayPage() {
             { label: "How To Play" },
           ]}
         />
+        <p className="lead-muted">Strategy guide reviewed on {CONTENT_LAST_REVIEWED}</p>
         <CtaButtons />
       </PageHero>
 
@@ -99,9 +101,15 @@ export default function HowToPlayPage() {
             </Link>
             .
           </p>
+          <p>
+            Read our{" "}
+            <Link className="text-link" href="/editorial-policy">
+              editorial standards
+            </Link>{" "}
+            for how strategy content is reviewed.
+          </p>
         </div>
       </section>
     </>
   );
 }
-

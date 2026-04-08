@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import {
   AFFILIATE_LINK,
   AFFILIATE_REL,
+  CONTENT_LAST_REVIEWED,
   EXTERNAL_REL,
   SOCIAL_PROFILES,
 } from "@/lib/site";
@@ -117,6 +118,13 @@ const FAQ_ITEMS = [
     answer:
       "Yes, free contests are available, and paid contests are optional for cash prizes.",
   },
+];
+
+const TRUST_FACTS = [
+  "Install and onboarding guides are reviewed before updates go live.",
+  "Risk and responsible-play reminders are included across decision pages.",
+  "Internal links connect users from install to login, referral, and strategy flow.",
+  `Last full content review: ${CONTENT_LAST_REVIEWED}`,
 ];
 
 const SOCIAL_LINKS = [
@@ -378,6 +386,39 @@ export function Pick11HomePage({
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section section-tight">
+        <div className="container two-col">
+          <article className="card">
+            <h2>Why Readers Trust This Guide</h2>
+            <ul className="tick-list">
+              {TRUST_FACTS.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+          <article className="card">
+            <h2>Editorial Transparency</h2>
+            <p>
+              We publish practical help for users searching goplay11, goplay11 apk, and
+              goplay11 app download. We update pages when install or onboarding flow
+              changes are detected.
+            </p>
+            <p>
+              Review process details are available on our
+              {" "}
+              <a className="text-link" href="/editorial-policy">
+                Editorial Policy
+              </a>{" "}
+              and{" "}
+              <a className="text-link" href="/about">
+                About page
+              </a>
+              .
+            </p>
+          </article>
         </div>
       </section>
 

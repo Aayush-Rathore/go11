@@ -12,6 +12,7 @@ import {
   buildMetadata,
   buildSoftwareApplicationSchema,
 } from "@/lib/seo";
+import { CONTENT_LAST_REVIEWED } from "@/lib/site";
 
 const PAGE_TITLE = "Goplay11 App Download - Play Fantasy Games & Win Rewards";
 const PAGE_DESCRIPTION =
@@ -26,6 +27,13 @@ const APP_INFO = [
   "Version: Latest 2026",
   "Size: Lightweight APK",
   "Compatibility: Android Devices",
+];
+
+const GUIDE_SNAPSHOT = [
+  "Primary intent: goplay11 app download and setup",
+  "Audience: first-time Android users",
+  "Review method: install flow + safety checklist verification",
+  `Last reviewed: ${CONTENT_LAST_REVIEWED}`,
 ];
 
 const ABOUT_POINTS = [
@@ -94,6 +102,20 @@ const PROS = [
 const CONS = [
   "Requires internet connection",
   "Skill-based learning is needed",
+];
+
+const TRUST_SIGNALS = [
+  "Guide reviewed with a source-validation checklist",
+  "Install safety and permissions checks included",
+  "Responsible-play guidance added before deposit decisions",
+  "Internal links provided for login, referral, and strategy flows",
+];
+
+const TROUBLESHOOTING_STEPS = [
+  "APK not installing: confirm Unknown Sources is enabled and re-download from trusted page.",
+  "Login issue: reset credentials via OTP and verify network stability before retry.",
+  "App lag on older device: close background apps and keep only latest APK build installed.",
+  "Referral not applied: check code entry before account submission on register screen.",
 ];
 
 const SCREENSHOTS = [
@@ -188,6 +210,10 @@ export default function Goplay11AppDownloadPage() {
             { label: "Goplay11 App Download" },
           ]}
         />
+        <p className="lead-muted">
+          Reviewed by editorial team on {CONTENT_LAST_REVIEWED} for accuracy and
+          onboarding safety.
+        </p>
         <CtaButtons />
       </PageHero>
 
@@ -201,6 +227,17 @@ export default function Goplay11AppDownloadPage() {
             If you are looking for the Goplay11 app download, install the latest
             Goplay11 APK and start playing instantly.
           </p>
+        </div>
+      </section>
+
+      <section className="section section-tight">
+        <div className="container card">
+          <h2>Guide Snapshot</h2>
+          <ul className="tick-list">
+            {GUIDE_SNAPSHOT.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -336,6 +373,46 @@ export default function Goplay11AppDownloadPage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section section-tight">
+        <div className="container two-col">
+          <article className="card">
+            <h2>Troubleshooting Common Issues</h2>
+            <ol className="step-list">
+              {TROUBLESHOOTING_STEPS.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+          </article>
+
+          <article className="card">
+            <h2>Why You Can Trust This Page</h2>
+            <ul className="tick-list">
+              {TRUST_SIGNALS.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p>
+              Read more in our{" "}
+              <Link className="text-link" href="/about">
+                About page
+              </Link>{" "}
+              and{" "}
+              <Link className="text-link" href="/editorial-policy">
+                Editorial Policy
+              </Link>
+              .
+            </p>
+            <p>
+              Before joining paid contests, review{" "}
+              <Link className="text-link" href="/responsible-play">
+                Responsible Play
+              </Link>
+              .
+            </p>
+          </article>
         </div>
       </section>
 

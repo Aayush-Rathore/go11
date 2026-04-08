@@ -16,6 +16,7 @@ export const DEFAULT_DESCRIPTION =
 export const BUSINESS_NAME = "GO11 Fantasy Media";
 export const SUPPORT_PHONE = "+91-80456-77881";
 export const SUPPORT_EMAIL = "support@goplay11-apk.com";
+export const CONTENT_LAST_REVIEWED = "2026-04-08";
 export const BUSINESS_ADDRESS = {
   streetAddress: "44 Residency Road",
   addressLocality: "Bengaluru",
@@ -74,15 +75,47 @@ export const LONG_TAIL_KEYWORDS = [
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/download", label: "Download" },
   { href: "/goplay11-app-download", label: "App Download" },
   { href: "/goplay11-fantasy-app", label: "Fantasy App" },
   { href: "/apk", label: "APK" },
   { href: "/how-to-play", label: "How To Play" },
+  { href: "/responsible-play", label: "Responsible Play" },
   { href: "/login-register", label: "Login/Register" },
   { href: "/referral-code", label: "Referral Code" },
   { href: "/contact", label: "Contact" },
   { href: "/blog", label: "Blog" },
+  { href: "/editorial-policy", label: "Editorial Policy" },
+];
+
+export type ExpertProfile = {
+  name: string;
+  role: string;
+  experience: string;
+  focus: string;
+};
+
+export const EXPERT_TEAM: ExpertProfile[] = [
+  {
+    name: "Rohan Mehta",
+    role: "Fantasy Strategy Analyst",
+    experience: "8+ years in fantasy contest analytics and bankroll planning",
+    focus: "Contest selection, role-balance strategy, and risk controls",
+  },
+  {
+    name: "Ananya Kulkarni",
+    role: "Mobile App Trust Researcher",
+    experience: "6+ years auditing Android onboarding and app safety flows",
+    focus: "APK source validation, permissions review, and account safety",
+  },
+];
+
+export const EDITORIAL_STANDARDS = [
+  "Every guide is reviewed for accuracy, readability, and user safety before publication.",
+  "Pages are updated when app flows, install steps, or policy details change.",
+  "We separate informational guidance from affiliate placements and label external links clearly.",
+  "Responsible play, bankroll discipline, and local eligibility checks are included in high-risk topics.",
 ];
 
 export type FaqItem = {

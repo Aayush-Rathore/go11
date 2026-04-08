@@ -11,6 +11,7 @@ import {
   buildMetadata,
   buildSoftwareApplicationSchema,
 } from "@/lib/seo";
+import { CONTENT_LAST_REVIEWED } from "@/lib/site";
 
 const PAGE_TITLE = "Goplay11 Fantasy App - Play Smart and Win Big Online";
 const PAGE_DESCRIPTION =
@@ -139,6 +140,7 @@ export default function Goplay11FantasyAppPage() {
             { label: "Goplay11 Fantasy App" },
           ]}
         />
+        <p className="lead-muted">Strategy page reviewed on {CONTENT_LAST_REVIEWED}</p>
         <CtaButtons />
       </PageHero>
 
@@ -243,6 +245,20 @@ export default function Goplay11FantasyAppPage() {
               and then continue with{" "}
               <Link className="text-link" href="/how-to-play">
                 gameplay setup
+              </Link>
+              .
+            </p>
+            <p>
+              For review methodology and update standards, check{" "}
+              <Link className="text-link" href="/editorial-policy">
+                Editorial Policy
+              </Link>
+              .
+            </p>
+            <p>
+              Set budget and risk limits with our{" "}
+              <Link className="text-link" href="/responsible-play">
+                Responsible Play checklist
               </Link>
               .
             </p>

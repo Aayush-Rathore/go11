@@ -26,6 +26,14 @@ function formatDate(dateValue: string): string {
   });
 }
 
+function getAuthor(post: { author?: string }): string {
+  return post.author ?? "GoPlay11 Editorial Team";
+}
+
+function getReviewer(post: { reviewer?: string }): string {
+  return post.reviewer ?? "GoPlay11 Content Review Team";
+}
+
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
@@ -74,6 +82,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           path,
           datePublished: post.publishedAt,
           dateModified: post.updatedAt,
+          authorName: getAuthor(post),
+          reviewerName: getReviewer(post),
         })}
       />
       <JsonLd
@@ -97,6 +107,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <p className="meta">
             Published: {formatDate(post.publishedAt)} | Updated:{" "}
             {formatDate(post.updatedAt)}
+          </p>
+          <p className="meta">
+            Author: {getAuthor(post)} | Reviewed by: {getReviewer(post)}
           </p>
           <h1 className="hero-title">{post.title}</h1>
           <p className="lead">{post.description}</p>
@@ -136,4 +149,3 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     </>
   );
 }
-

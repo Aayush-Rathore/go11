@@ -11,6 +11,7 @@ import {
   buildMetadata,
   buildSoftwareApplicationSchema,
 } from "@/lib/seo";
+import { CONTENT_LAST_REVIEWED } from "@/lib/site";
 
 const PAGE_TITLE = "Download Goplay11 APK Latest Version (2026)";
 const PAGE_DESCRIPTION =
@@ -74,6 +75,7 @@ export default function DownloadPage() {
             { label: "Download" },
           ]}
         />
+        <p className="lead-muted">Review date: {CONTENT_LAST_REVIEWED}</p>
         <CtaButtons />
       </PageHero>
 
@@ -120,6 +122,13 @@ export default function DownloadPage() {
                 Play fantasy games online
               </Link>{" "}
               to study lineup planning basics.
+            </p>
+            <p>
+              For quality standards, see{" "}
+              <Link className="text-link" href="/editorial-policy">
+                Editorial Policy
+              </Link>
+              .
             </p>
           </article>
         </div>

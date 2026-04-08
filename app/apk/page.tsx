@@ -9,6 +9,7 @@ import {
   buildMetadata,
   buildSoftwareApplicationSchema,
 } from "@/lib/seo";
+import { CONTENT_LAST_REVIEWED } from "@/lib/site";
 
 const PAGE_TITLE = "Goplay11 APK - Fast Android Install and Latest Version Guide";
 const PAGE_DESCRIPTION =
@@ -58,6 +59,7 @@ export default function ApkPage() {
             { label: "APK" },
           ]}
         />
+        <p className="lead-muted">Review date: {CONTENT_LAST_REVIEWED}</p>
         <CtaButtons />
       </PageHero>
 
@@ -103,6 +105,13 @@ export default function ApkPage() {
               For a direct installation path, use{" "}
               <Link className="text-link" href="/download">
                 Download Goplay11 APK
+              </Link>
+              .
+            </p>
+            <p>
+              Want to review team expertise? Visit{" "}
+              <Link className="text-link" href="/about">
+                About
               </Link>
               .
             </p>

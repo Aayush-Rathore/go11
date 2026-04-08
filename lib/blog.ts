@@ -12,6 +12,8 @@ export type BlogPost = {
   excerpt: string;
   publishedAt: string;
   updatedAt: string;
+  author?: string;
+  reviewer?: string;
   keywords: string[];
   sections: BlogSection[];
   faq?: FaqItem[];
@@ -27,6 +29,8 @@ export const BLOG_POSTS: BlogPost[] = [
       "A practical checklist to compare app speed, contest depth, and reward structure before choosing your daily fantasy platform.",
     publishedAt: "2026-01-12",
     updatedAt: "2026-03-20",
+    author: "Rohan Mehta",
+    reviewer: "Ananya Kulkarni",
     keywords: [
       "best fantasy apps in india",
       "goplay11 fantasy app",
@@ -66,6 +70,8 @@ export const BLOG_POSTS: BlogPost[] = [
       "Winning consistently in fantasy depends on process. Use role balance, matchup research, and controlled risk exposure.",
     publishedAt: "2026-01-26",
     updatedAt: "2026-03-18",
+    author: "Rohan Mehta",
+    reviewer: "Ananya Kulkarni",
     keywords: [
       "how to play goplay11 fantasy app",
       "goplay11 fantasy app tips",
@@ -116,6 +122,8 @@ export const BLOG_POSTS: BlogPost[] = [
       "A focused comparison of app speed, entry flow, and user experience so you can pick the right fantasy platform.",
     publishedAt: "2026-02-14",
     updatedAt: "2026-03-22",
+    author: "Rohan Mehta",
+    reviewer: "Ananya Kulkarni",
     keywords: ["goplay11 vs other apps", "goplay11 apk", "goplay11 login"],
     sections: [
       {
@@ -150,6 +158,8 @@ export const BLOG_POSTS: BlogPost[] = [
       "Before joining paid contests, verify source links, permissions, support channels, and payout rules.",
     publishedAt: "2026-02-28",
     updatedAt: "2026-03-23",
+    author: "Ananya Kulkarni",
+    reviewer: "Rohan Mehta",
     keywords: [
       "is goplay11 safe or real",
       "goplay11 app latest version",
@@ -200,6 +210,8 @@ export const BLOG_POSTS: BlogPost[] = [
       "As mobile gaming shifts toward speed and simplicity, GoPlay11 stands out with lightweight access, APK flexibility, and a smooth user experience across devices.",
     publishedAt: "2026-04-07",
     updatedAt: "2026-04-07",
+    author: "Ananya Kulkarni",
+    reviewer: "Rohan Mehta",
     keywords: [
       "goplay11 game",
       "go play 11",
@@ -300,6 +312,8 @@ export const BLOG_POSTS: BlogPost[] = [
       "Whether you're new to Go Play 11 or looking for a reliable APK download option, this guide covers installation, features, performance, and tips for the best experience.",
     publishedAt: "2026-04-07",
     updatedAt: "2026-04-07",
+    author: "Ananya Kulkarni",
+    reviewer: "Rohan Mehta",
     keywords: [
       "goplay11 game",
       "go play 11",
@@ -397,6 +411,162 @@ export const BLOG_POSTS: BlogPost[] = [
         question: "Why is Go Play 11 becoming popular?",
         answer:
           "It offers a simple interface, fast performance, and flexible installation options.",
+      },
+    ],
+  },
+  {
+    slug: "goplay11-app-download-complete-checklist-2026",
+    title: "GoPlay11 App Download: Complete Setup Checklist for 2026",
+    description:
+      "Use this step-by-step checklist to complete GoPlay11 app download, APK install, account setup, and first contest preparation.",
+    excerpt:
+      "A practical setup checklist for users searching goplay11 app, goplay11 app download, and goplay11 apk guidance.",
+    publishedAt: "2026-04-08",
+    updatedAt: "2026-04-08",
+    author: "Ananya Kulkarni",
+    reviewer: "Rohan Mehta",
+    keywords: [
+      "goplay11 app download",
+      "goplay11 app",
+      "goplay11 apk",
+      "go play 11 apk download",
+      "download goplay11 app",
+    ],
+    sections: [
+      {
+        heading: "Step 1: Use a trusted source before install",
+        paragraphs: [
+          "Most installation issues start with low-trust download links. Begin with a known source and avoid mirrored APK pages without version details.",
+          "When users search for goplay11 app download, they often compare multiple links. Prioritize source transparency over speed.",
+          'For a direct walkthrough, use our <a class="text-link" href="/goplay11-app-download">GoPlay11 app download guide</a>.',
+        ],
+      },
+      {
+        heading: "Step 2: Prepare your Android device",
+        paragraphs: [
+          'Before install, enable "Unknown Sources" only for the required action, then disable it after setup.',
+          "Ensure your device has enough free space and stable network conditions before downloading large files.",
+          "If install is blocked, restart download once and clear partial files to avoid package conflicts.",
+        ],
+      },
+      {
+        heading: "Step 3: Complete registration the right way",
+        paragraphs: [
+          "Use a reachable mobile number and verify OTP quickly to avoid session timeout.",
+          "If you have a referral code, apply it before final registration submission.",
+          'Detailed onboarding help is available in <a class="text-link" href="/login-register">Goplay11 login/register</a>.',
+        ],
+      },
+      {
+        heading: "Step 4: Secure your account and wallet actions",
+        paragraphs: [
+          "Set a strong password and avoid sharing OTP with anyone.",
+          "Review contest rules and wallet terms before adding funds.",
+          "For new users, begin with low-risk contest entries and fixed daily limits.",
+        ],
+      },
+      {
+        heading: "Step 5: Keep a review loop after your first week",
+        paragraphs: [
+          "Track what worked in your lineup choices and where decisions failed.",
+          "Do not increase entry size too quickly. Process quality matters more than one-day outcomes.",
+          'Use the <a class="text-link" href="/how-to-play">How to Play guide</a> to build stable long-term habits.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "What is the safest way to complete GoPlay11 app download?",
+        answer:
+          "Use a trusted source, verify app permissions, and avoid unofficial mirrors without update details.",
+      },
+      {
+        question: "When should I apply a referral code?",
+        answer:
+          "Apply it during signup before final account submission so welcome benefits can be activated.",
+      },
+      {
+        question: "Can I start with free contests after install?",
+        answer:
+          "Yes. Beginners should begin with free or low-entry contests while learning scoring behavior.",
+      },
+    ],
+  },
+  {
+    slug: "goplay11-apk-install-not-working-fixes",
+    title: "Goplay11 APK Not Installing? Fixes for Common Android Issues",
+    description:
+      "Troubleshoot package errors, blocked install prompts, storage limits, and login delays after GoPlay11 APK download.",
+    excerpt:
+      "A focused troubleshooting guide for users facing goplay11 apk install and onboarding errors.",
+    publishedAt: "2026-04-08",
+    updatedAt: "2026-04-08",
+    author: "Ananya Kulkarni",
+    reviewer: "Rohan Mehta",
+    keywords: [
+      "goplay11 apk",
+      "goplay11 apk install issue",
+      "goplay11 app download problem",
+      "go play 11 apk",
+      "goplay11 login issue",
+    ],
+    sections: [
+      {
+        heading: "Package parse error after APK download",
+        paragraphs: [
+          "A parse error usually means file corruption, incomplete download, or unsupported Android build.",
+          "Delete the file and re-download from a trusted source instead of retrying the same broken package.",
+          "Check device compatibility and available storage before installing again.",
+        ],
+      },
+      {
+        heading: "Unknown Sources enabled but install still blocked",
+        paragraphs: [
+          "Some devices require enabling app install permission for the specific browser or file manager, not only global settings.",
+          "Grant temporary permission, install the APK, then disable permission for better security.",
+          "Restarting the device can clear stuck installer sessions on older Android versions.",
+        ],
+      },
+      {
+        heading: "App installed but login fails repeatedly",
+        paragraphs: [
+          "Confirm number format, OTP timing, and network stability before retrying login.",
+          "If the OTP does not arrive, wait briefly before requesting another code to avoid lockout loops.",
+          'For full flow guidance, use <a class="text-link" href="/login-register">Login/Register guide</a>.',
+        ],
+      },
+      {
+        heading: "Slow performance after first launch",
+        paragraphs: [
+          "Clear unused apps in background and keep sufficient free memory for smoother loading.",
+          "Avoid running multiple heavy apps while joining live contests.",
+          "Update to the latest stable APK build when performance patches are released.",
+        ],
+      },
+      {
+        heading: "Prevention checklist for future installs",
+        paragraphs: [
+          "Always verify source, file size consistency, and required permissions before install.",
+          "Use one clean install path instead of switching between multiple APK mirrors.",
+          'Bookmark the core setup page: <a class="text-link" href="/goplay11-app-download">GoPlay11 App Download</a>.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Why does Goplay11 APK show package error?",
+        answer:
+          "It is commonly caused by incomplete download, incompatible Android version, or corrupted APK file.",
+      },
+      {
+        question: "How do I fix blocked APK installation?",
+        answer:
+          "Enable install permission for your browser or file manager temporarily, then retry with a fresh file.",
+      },
+      {
+        question: "What should I do after successful install?",
+        answer:
+          "Complete login setup, verify account details, and start with low-risk contests first.",
       },
     ],
   },

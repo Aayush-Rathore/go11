@@ -5,6 +5,7 @@ import { CtaButtons } from "@/components/cta-buttons";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
+import { CONTENT_LAST_REVIEWED } from "@/lib/site";
 
 const PAGE_TITLE = "Goplay11 Login and Register Guide";
 const PAGE_DESCRIPTION =
@@ -52,6 +53,7 @@ export default function LoginRegisterPage() {
             { label: "Login/Register" },
           ]}
         />
+        <p className="lead-muted">Onboarding flow reviewed on {CONTENT_LAST_REVIEWED}</p>
         <CtaButtons />
       </PageHero>
 
@@ -94,9 +96,15 @@ export default function LoginRegisterPage() {
             </Link>
             .
           </p>
+          <p>
+            For content governance and updates, read{" "}
+            <Link className="text-link" href="/editorial-policy">
+              Editorial Policy
+            </Link>
+            .
+          </p>
         </div>
       </section>
     </>
   );
 }
-

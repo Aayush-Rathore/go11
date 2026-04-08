@@ -7,11 +7,14 @@ const STATIC_LAST_MODIFIED = new Date();
 
 const CORE_ROUTES = [
   { path: "/", changeFrequency: "daily" as const, priority: 1 },
+  { path: "/about", changeFrequency: "monthly" as const, priority: 0.78 },
+  { path: "/editorial-policy", changeFrequency: "monthly" as const, priority: 0.74 },
   { path: "/download", changeFrequency: "daily" as const, priority: 0.95 },
   { path: "/goplay11-app-download", changeFrequency: "weekly" as const, priority: 0.91 },
   { path: "/goplay11-fantasy-app", changeFrequency: "weekly" as const, priority: 0.9 },
   { path: "/apk", changeFrequency: "weekly" as const, priority: 0.9 },
   { path: "/how-to-play", changeFrequency: "weekly" as const, priority: 0.86 },
+  { path: "/responsible-play", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/login-register", changeFrequency: "weekly" as const, priority: 0.82 },
   { path: "/referral-code", changeFrequency: "weekly" as const, priority: 0.88 },
   { path: "/contact", changeFrequency: "monthly" as const, priority: 0.66 },

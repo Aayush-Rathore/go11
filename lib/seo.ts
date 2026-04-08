@@ -40,6 +40,9 @@ type ArticleSchemaOptions = {
   path: string;
   datePublished: string;
   dateModified: string;
+  authorName?: string;
+  reviewerName?: string;
+  imagePath?: string;
 };
 
 const ALL_KEYWORDS = Array.from(
@@ -90,7 +93,6 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
     options.description ?? DEFAULT_DESCRIPTION,
     DESCRIPTION_MAX_LENGTH,
   );
-  const url = absoluteUrl(options.path ?? "/");
   const canonicalUrl = absoluteUrl(options.canonicalPath ?? options.path ?? "/");
   const shouldIndex = !(options.noIndex ?? false);
   const keywords = Array.from(new Set([...(options.keywords ?? []), ...ALL_KEYWORDS]));
@@ -198,8 +200,19 @@ export function buildArticleSchema(options: ArticleSchemaOptions) {
     headline: options.title,
     description: options.description,
     mainEntityOfPage: absoluteUrl(options.path),
+    inLanguage: "en-IN",
     datePublished: options.datePublished,
     dateModified: options.dateModified,
+    image: absoluteUrl(options.imagePath ?? SOCIAL_PREVIEW_PATH),
+    isAccessibleForFree: true,
+    author: {
+      "@type": "Person",
+      name: options.authorName ?? "GoPlay11 Editorial Team",
+    },
+    reviewedBy: {
+      "@type": "Person",
+      name: options.reviewerName ?? "GoPlay11 Content Review Team",
+    },
     publisher: {
       "@id": ORGANIZATION_ID,
     },
@@ -265,6 +278,11 @@ export function buildWebsiteSchema() {
     inLanguage: ["en-IN", "en-US"],
     publisher: {
       "@id": ORGANIZATION_ID,
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE_URL}/blog?query={search_term_string}`,
+      "query-input": "required name=search_term_string",
     },
   };
 }

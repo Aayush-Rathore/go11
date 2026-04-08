@@ -9,6 +9,7 @@ import {
   AFFILIATE_LINK,
   AFFILIATE_REL,
   BUSINESS_ADDRESS,
+  CONTENT_LAST_REVIEWED,
   EXTERNAL_REL,
   GOOGLE_BUSINESS_PROFILE_URL,
   SOCIAL_PROFILES,
@@ -63,6 +64,7 @@ export default function ContactPage() {
             { label: "Contact" },
           ]}
         />
+        <p className="lead-muted">Support information reviewed on {CONTENT_LAST_REVIEWED}</p>
       </PageHero>
 
       <section className="section section-tight">
@@ -101,6 +103,13 @@ export default function ContactPage() {
               <a className="text-link" href={AFFILIATE_LINK} rel={AFFILIATE_REL} target="_blank">
                 Open campaign link
               </a>
+            </p>
+            <p>
+              Learn how our content is reviewed in{" "}
+              <Link className="text-link" href="/editorial-policy">
+                Editorial Policy
+              </Link>
+              .
             </p>
           </article>
         </div>
