@@ -23,8 +23,10 @@ type MetadataOptions = {
   title?: string;
   description?: string;
   path?: string;
+  canonicalPath?: string;
   keywords?: string[];
   openGraphType?: "website" | "article";
+  noIndex?: boolean;
 };
 
 type BreadcrumbItem = {
@@ -89,6 +91,8 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
     DESCRIPTION_MAX_LENGTH,
   );
   const url = absoluteUrl(options.path ?? "/");
+  const canonicalUrl = absoluteUrl(options.canonicalPath ?? options.path ?? "/");
+  const shouldIndex = !(options.noIndex ?? false);
   const keywords = Array.from(new Set([...(options.keywords ?? []), ...ALL_KEYWORDS]));
 
   return {
@@ -96,12 +100,12 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
     description,
     keywords,
     alternates: {
-      canonical: url,
-      languages: buildLanguageAlternates(url),
+      canonical: canonicalUrl,
+      languages: buildLanguageAlternates(canonicalUrl),
     },
     openGraph: {
       type: options.openGraphType ?? "website",
-      url,
+      url: canonicalUrl,
       title,
       description,
       siteName: SITE_NAME,
@@ -122,8 +126,15 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
       images: [`${SITE_URL}${SOCIAL_PREVIEW_PATH}`],
     },
     robots: {
-      index: true,
+      index: shouldIndex,
       follow: true,
+      googleBot: {
+        index: shouldIndex,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
     },
   };
 }

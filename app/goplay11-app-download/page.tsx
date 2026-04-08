@@ -15,11 +15,11 @@ import {
 
 const PAGE_TITLE = "Goplay11 App Download - Play Fantasy Games & Win Rewards";
 const PAGE_DESCRIPTION =
-  "Goplay11 is an exciting online fantasy gaming platform where users can create teams, play contests, and win rewards using skills and strategy.";
+  "Download the GoPlay11 app, install the latest GoPlay11 APK safely, and start fantasy contests with a guided setup flow.";
 
-const META_TITLE = "Goplay11 APK App Download - India's No.1 Trusted Fantasy";
+const META_TITLE = "GoPlay11 App Download & GoPlay11 APK Guide (2026)";
 const META_DESCRIPTION =
-  "Download Goplay11 APK app and enjoy fantasy gaming. Play contests, create teams, and win rewards on India's trusted gaming platform, now live.";
+  "Step-by-step GoPlay11 app download guide with APK install help, login setup, and beginner-ready onboarding for fantasy players.";
 
 const APP_INFO = [
   "App Name: Goplay11",

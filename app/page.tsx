@@ -1,5 +1,7 @@
+import { JsonLd } from "@/components/json-ld";
 import { Pick11HomePage } from "@/components/pick11-home-page";
-import { buildMetadata } from "@/lib/seo";
+import { buildFaqSchema, buildMetadata, buildSoftwareApplicationSchema } from "@/lib/seo";
+import { HOME_FAQS } from "@/lib/site";
 
 const PAGE_TITLE = "Go Play 11 APK Download | GoPlay11 Fantasy Cricket App";
 const PAGE_DESCRIPTION =
@@ -14,11 +16,18 @@ export const metadata = buildMetadata({
     "go play 11 apk",
     "go play 11 apk download",
     "goplay11",
+    "goplay11 app",
     "goplay11 apk",
     "goplay11 apk download",
   ],
 });
 
 export default function HomePage() {
-  return <Pick11HomePage />;
+  return (
+    <>
+      <JsonLd data={buildSoftwareApplicationSchema(PAGE_DESCRIPTION, "/")} />
+      <JsonLd data={buildFaqSchema(HOME_FAQS)} />
+      <Pick11HomePage />
+    </>
+  );
 }

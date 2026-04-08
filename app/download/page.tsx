@@ -47,6 +47,7 @@ export const metadata = buildMetadata({
   title: PAGE_TITLE,
   description: PAGE_DESCRIPTION,
   path: "/download",
+  canonicalPath: "/goplay11-app-download",
   keywords: ["download goplay11 app", "goplay11 app latest version"],
 });
 
@@ -128,4 +129,3 @@ export default function DownloadPage() {
     </>
   );
 }
-

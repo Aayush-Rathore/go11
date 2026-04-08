@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { SITE_URL } from "@/lib/site";
 
-const LAST_MODIFIED = new Date("2026-03-24T00:00:00.000Z");
+const STATIC_LAST_MODIFIED = new Date();
 
 const CORE_ROUTES = [
   { path: "/", changeFrequency: "daily" as const, priority: 1 },
@@ -33,7 +33,7 @@ function buildLanguageAlternates(path: string) {
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticUrls: MetadataRoute.Sitemap = CORE_ROUTES.map((route) => ({
     url: `${SITE_URL}${route.path}`,
-    lastModified: LAST_MODIFIED,
+    lastModified: STATIC_LAST_MODIFIED,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
     alternates: buildLanguageAlternates(route.path),
@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogUrls: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
-    lastModified: post.updatedAt,
+    lastModified: new Date(post.updatedAt),
     changeFrequency: "monthly",
     priority: 0.78,
     alternates: buildLanguageAlternates(`/blog/${post.slug}`),

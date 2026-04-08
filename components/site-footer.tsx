@@ -41,7 +41,7 @@ export function SiteFooter() {
             <p className="footer-title">{SITE_NAME}</p>
           </div>
           <p className="footer-copy">
-            SEO-focused resource hub for Goplay11 app download, setup guides, and
+            Practical resource hub for GoPlay11 app download, setup guides, and
             fantasy play strategies.
           </p>
         </div>

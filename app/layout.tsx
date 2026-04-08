@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   },
   description: DEFAULT_DESCRIPTION,
   keywords: GLOBAL_KEYWORDS,
-  authors: [{ name: "GO11 Editorial Team", url: SITE_URL }],
-  creator: "GO11 Editorial Team",
+  authors: [{ name: "GoPlay11 Editorial Team", url: SITE_URL }],
+  creator: "GoPlay11 Editorial Team",
   publisher: SITE_NAME,
   applicationName: SITE_NAME,
   alternates: {

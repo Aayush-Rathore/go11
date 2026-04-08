@@ -9,7 +9,7 @@ import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
 
 const PAGE_TITLE = "Goplay11 Blog - Fantasy Tips, APK Guides, and Comparisons";
 const PAGE_DESCRIPTION =
-  "Read SEO-focused blog content on fantasy strategy, app comparisons, and Goplay11 onboarding best practices.";
+  "Read practical fantasy strategy guides, GoPlay11 APK tutorials, and app comparison articles for safer onboarding.";
 
 function formatDate(dateValue: string): string {
   return new Date(dateValue).toLocaleDateString("en-IN", {
@@ -39,7 +39,7 @@ export default function BlogIndexPage() {
       />
 
       <PageHero
-        eyebrow="SEO Content Hub"
+        eyebrow="Guides and Tips"
         title={PAGE_TITLE}
         description={PAGE_DESCRIPTION}
       >
@@ -73,4 +73,3 @@ export default function BlogIndexPage() {
     </>
   );
 }
-

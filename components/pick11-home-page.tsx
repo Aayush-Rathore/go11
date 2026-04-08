@@ -189,8 +189,8 @@ export function Pick11HomePage({
               Create your dream team, join contests, and win daily with GoPlay11.
             </p>
             <p className="pick11-hero-search-terms">
-              Also searched as: Go Play 11, Go Play 11 APK, and Go Play 11 APK
-              download.
+              Looking for Go Play 11, Go Play 11 APK, or Goplay11 app download? You are
+              in the right place.
             </p>
             <div className="pick11-hero-chip-row">
               {HERO_HIGHLIGHTS.map((highlight) => (
@@ -240,25 +240,39 @@ export function Pick11HomePage({
             </div>
 
             <div className="pick11-about-visual">
-              <img alt="GoPlay11 gameplay" className="pick11-about-main-img" src="/goplay11-1.jpeg" />
+              <img
+                alt="GoPlay11 gameplay"
+                className="pick11-about-main-img"
+                decoding="async"
+                loading="lazy"
+                src="/goplay11-1.jpeg"
+              />
               <img
                 alt="GoPlay11 contests"
                 className="pick11-flying-icon pick11-fly-1"
+                decoding="async"
+                loading="lazy"
                 src="/goplay11-2.jpeg"
               />
               <img
                 alt="GoPlay11 team builder"
                 className="pick11-flying-icon pick11-fly-2"
+                decoding="async"
+                loading="lazy"
                 src="/goplay11-3.jpeg"
               />
               <img
                 alt="GoPlay11 live tracking"
                 className="pick11-flying-icon pick11-fly-3"
+                decoding="async"
+                loading="lazy"
                 src="/goplay11-4.jpeg"
               />
               <img
                 alt="GoPlay11 payouts"
                 className="pick11-flying-icon pick11-fly-4"
+                decoding="async"
+                loading="lazy"
                 src="/goplay11-5.jpeg"
               />
             </div>
@@ -285,6 +299,8 @@ export function Pick11HomePage({
                     key={EXPERIENCE_STEPS[experienceIndex]?.image}
                     alt={EXPERIENCE_STEPS[experienceIndex]?.title}
                     className="pick11-phone-image"
+                    decoding="async"
+                    loading="lazy"
                     src={EXPERIENCE_STEPS[experienceIndex]?.image}
                   />
                 </div>
