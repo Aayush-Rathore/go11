@@ -19,6 +19,11 @@ export const metadata = buildMetadata({
     "goplay11 app",
     "goplay11 apk",
     "goplay11 apk download",
+    "gopay 11",
+    "gopay11",
+    "gopay 11 apk",
+    "gopay 11 download",
+    "gopay 11 apk download",
   ],
 });
 

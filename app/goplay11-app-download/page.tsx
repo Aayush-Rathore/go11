@@ -18,9 +18,9 @@ const PAGE_TITLE = "Goplay11 App Download - Play Fantasy Games & Win Rewards";
 const PAGE_DESCRIPTION =
   "Download the GoPlay11 app, install the latest GoPlay11 APK safely, and start fantasy contests with a guided setup flow.";
 
-const META_TITLE = "GoPlay11 App Download & GoPlay11 APK Guide (2026)";
+const META_TITLE = "GoPlay11 App Download & APK Install Guide 2026 (Gopay11)";
 const META_DESCRIPTION =
-  "Step-by-step GoPlay11 app download guide with APK install help, login setup, and beginner-ready onboarding for fantasy players.";
+  "Complete GoPlay11 app download guide with APK install steps, login setup, and beginner onboarding. Also covers gopay 11 and gopay11 search variants.";
 
 const APP_INFO = [
   "App Name: Goplay11",
@@ -182,6 +182,11 @@ export const metadata = buildMetadata({
     "go play11 app",
     "download goplay11 apk for android",
     "download goplay11 app",
+    "gopay 11",
+    "gopay11",
+    "gopay 11 apk",
+    "gopay 11 download",
+    "gopay 11 app download",
   ],
 });
 

@@ -60,6 +60,14 @@ export const SECONDARY_KEYWORDS = [
   "goplay11 referral code",
   "goplay11 app latest version",
   "goplay11 games",
+  // misspelling variants users are actively searching
+  "gopay 11",
+  "gopay11",
+  "gopay 11 apk",
+  "gopay11 apk",
+  "gopay 11 download",
+  "gopay 11 apk download",
+  "gopay 11 app download",
 ];
 
 export const LONG_TAIL_KEYWORDS = [

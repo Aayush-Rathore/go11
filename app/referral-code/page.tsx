@@ -8,9 +8,9 @@ import { PageHero } from "@/components/page-hero";
 import { buildBreadcrumbSchema, buildFaqSchema, buildMetadata } from "@/lib/seo";
 import { CONTENT_LAST_REVIEWED, REFERRAL_FAQS } from "@/lib/site";
 
-const PAGE_TITLE = "Goplay11 Referral Code - Earn Bonus Instantly";
+const PAGE_TITLE = "Goplay11 Referral Code 2026 - Get Bonus on Signup";
 const PAGE_DESCRIPTION =
-  "Use a valid Goplay11 referral code during signup, unlock instant bonus offers, and earn extra rewards when friends join.";
+  "Enter the Goplay11 referral code during signup to unlock instant bonus rewards. Step-by-step guide for new users in 2026.";
 
 const REFERRAL_POINTS = [
   "Enter referral code during signup",
@@ -22,7 +22,13 @@ export const metadata = buildMetadata({
   title: PAGE_TITLE,
   description: PAGE_DESCRIPTION,
   path: "/referral-code",
-  keywords: ["goplay11 referral code", "goplay11 register", "goplay11 bonus"],
+  keywords: [
+    "goplay11 referral code",
+    "goplay11 register",
+    "goplay11 bonus",
+    "gopay 11 referral code",
+    "gopay11 referral code",
+  ],
 });
 
 export default function ReferralCodePage() {
