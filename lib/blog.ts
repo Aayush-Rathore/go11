@@ -570,8 +570,6 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
-];
-
   {
     slug: "goplay11-india-no1-trusted-real-money-fantasy-platform",
     title: "GoPlay11: India's No.1 Trusted Real Money Fantasy Platform",
