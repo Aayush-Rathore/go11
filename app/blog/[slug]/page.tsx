@@ -49,11 +49,12 @@ export async function generateMetadata({
   }
 
   return buildMetadata({
-    title: post.title,
+    title: post.seoTitle ?? post.title,
     description: post.description,
     path: `/blog/${post.slug}`,
     keywords: post.keywords,
     openGraphType: "article",
+    ogTitle: post.ogTitle,
   });
 }
 
@@ -72,6 +73,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const path = `/blog/${post.slug}`;
+  const internalLinks = post.internalLinks ?? [];
 
   return (
     <>
@@ -117,32 +119,54 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </section>
 
       <section className="section section-tight">
-        <article className="container prose-card content-stack">
-          {post.sections.map((section) => (
-            <section key={section.heading}>
-              <h2>{section.heading}</h2>
-              {section.paragraphs.map((paragraph) => (
-                <p key={paragraph} dangerouslySetInnerHTML={{ __html: paragraph }} />
-              ))}
-            </section>
-          ))}
+        <div className="container blog-layout">
+          <article className="prose-card content-stack">
+            {post.sections.map((section) => (
+              <section key={section.heading}>
+                <h2>{section.heading}</h2>
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph} dangerouslySetInnerHTML={{ __html: paragraph }} />
+                ))}
+              </section>
+            ))}
 
-          <div className="card">
-            <h2>Continue your next step</h2>
-            <p>
-              Ready to apply this strategy? Go to{" "}
-              <Link className="text-link" href="/download">
-                Download GoPlay11 APK
-              </Link>{" "}
-              and then use the{" "}
-              <Link className="text-link" href="/how-to-play">
-                How to play GoPlay11
-              </Link>{" "}
-              guide.
-            </p>
-            <CtaButtons />
-          </div>
-        </article>
+            <div className="card">
+              <h2>Continue your next step</h2>
+              <p>
+                Ready to apply this strategy? Go to{" "}
+                <Link className="text-link" href="/download">
+                  Download GoPlay11 APK
+                </Link>{" "}
+                and then use the{" "}
+                <Link className="text-link" href="/how-to-play">
+                  How to play GoPlay11
+                </Link>{" "}
+                guide.
+              </p>
+              <CtaButtons />
+            </div>
+          </article>
+
+          {internalLinks.length > 0 ? (
+            <aside className="blog-sidebar" aria-label="Internal links in this article">
+              <h2>Internal links</h2>
+              <p className="blog-sidebar-copy">
+                Quick paths for download, setup, safety, and beginner support.
+              </p>
+              <nav aria-label="Related GoPlay11 pages">
+                <ul className="blog-sidebar-list">
+                  {internalLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link className="blog-sidebar-link" href={link.href}>
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </aside>
+          ) : null}
+        </div>
       </section>
 
       {post.faq ? <FaqList items={post.faq} title="Article FAQs" /> : null}
