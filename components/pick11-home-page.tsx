@@ -131,6 +131,12 @@ const TRUST_FACTS = [
 
 const SOCIAL_LINKS = [
   {
+    label: "Telegram",
+    short: "TG",
+    href: "https://t.me/goplay11apk",
+    gradient: "linear-gradient(135deg, #229ED9, #0088cc)",
+  },
+  {
     label: "Instagram",
     short: "IG",
     href: SOCIAL_PROFILES.instagram,
