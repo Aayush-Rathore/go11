@@ -2209,3 +2209,31 @@ body.home-template-active .site-main {
   border-top-color: rgba(36, 55, 79, 0.8);
   color: #9daec6;
 }
+
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.btn-secondary{
+  background:#2563eb;
+  color:#fff;
+  border-radius:8px;
+}
+
+.btn-secondary:hover{
+  background:#1d4ed8;
+}
+
+@media(max-width:1024px){
+  .header-actions{
+    display:none;
+  }
+
+  .mobile-cta{
+    width:100%;
+    margin-top:10px;
+    text-align:center;
+  }
+}
