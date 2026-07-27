@@ -30,6 +30,7 @@ const QUICK_LINKS = [
 
 export function SiteFooter() {
   const socialItems = [
+    { label: "Telegram", href: "https://t.me/goplay11apk" },
     { label: "Facebook", href: SOCIAL_PROFILES.facebook },
     { label: "X", href: SOCIAL_PROFILES.x },
     { label: "Instagram", href: SOCIAL_PROFILES.instagram },
@@ -40,19 +41,29 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
+        {/* Brand */}
         <div>
           <div className="footer-brand">
-            <Image alt="GoPlay11 APK — GoPlay11 logo" className="footer-logo" height={48} src={LOGO_PATH} width={48} />
+            <Image
+              alt="GoPlay11 APK — GoPlay11 logo"
+              className="footer-logo"
+              height={48}
+              src={LOGO_PATH}
+              width={48}
+            />
             <p className="footer-title">{SITE_NAME}</p>
           </div>
+
           <p className="footer-copy">
             Practical resource hub for GoPlay11 app download, setup guides, and
             fantasy play strategies.
           </p>
         </div>
 
+        {/* Quick Links */}
         <div>
           <p className="footer-title">Quick Links</p>
+
           <ul className="footer-list">
             {QUICK_LINKS.map((link) => (
               <li key={link.href}>
@@ -62,26 +73,54 @@ export function SiteFooter() {
           </ul>
         </div>
 
+        {/* Recommended Platform & Social */}
         <div>
           <p className="footer-title">Recommended Platform</p>
+
+          <p className="footer-copy">
+            Join our{" "}
+            <a
+              href="https://t.me/goplay11apk"
+              rel={EXTERNAL_REL}
+              target="_blank"
+            >
+              Official Telegram Channel
+            </a>{" "}
+            for the latest GoPlay11 APK updates, offers, and announcements.
+          </p>
+
           <p className="footer-copy">
             Explore{" "}
-            <a href={RECOMMENDED_PLATFORM_URL} rel={EXTERNAL_REL} target="_blank">
+            <a
+              href={RECOMMENDED_PLATFORM_URL}
+              rel={EXTERNAL_REL}
+              target="_blank"
+            >
               comegameapp.com
             </a>{" "}
             for more mobile gaming resources.
           </p>
+
           <p className="footer-copy">
             Manage your local listing using{" "}
-            <a href={GOOGLE_BUSINESS_PROFILE_URL} rel={EXTERNAL_REL} target="_blank">
+            <a
+              href={GOOGLE_BUSINESS_PROFILE_URL}
+              rel={EXTERNAL_REL}
+              target="_blank"
+            >
               Google Business Profile
             </a>
             .
           </p>
+
           <ul className="footer-list">
             {socialItems.map((item) => (
               <li key={item.label}>
-                <a href={item.href} rel={EXTERNAL_REL} target="_blank">
+                <a
+                  href={item.href}
+                  rel={EXTERNAL_REL}
+                  target="_blank"
+                >
                   {item.label}
                 </a>
               </li>
@@ -89,26 +128,32 @@ export function SiteFooter() {
           </ul>
         </div>
 
+        {/* Business Info */}
         <div>
           <p className="footer-title">Business Info (NAP)</p>
+
           <p className="footer-copy">
             {SITE_NAME}
             <br />
-            {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality},{" "}
-            {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}
+            {BUSINESS_ADDRESS.streetAddress},{" "}
+            {BUSINESS_ADDRESS.addressLocality},{" "}
+            {BUSINESS_ADDRESS.addressRegion}{" "}
+            {BUSINESS_ADDRESS.postalCode}
             <br />
             Phone: <a href={`tel:${SUPPORT_PHONE}`}>{SUPPORT_PHONE}</a>
             <br />
             Email: <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
           </p>
+
           <p className="footer-note">
             Disclaimer: This is not the official website. We are an independent
             informational resource and are not affiliated with the official
             GoPlay11 platform.
           </p>
+
           <p className="footer-note">
-            Play responsibly. Fantasy gaming involves risk and should be used by
-            eligible users only.
+            <strong>18+ Only.</strong> Fantasy gaming involves financial risk
+            and may be addictive. Please play responsibly.
           </p>
         </div>
       </div>
