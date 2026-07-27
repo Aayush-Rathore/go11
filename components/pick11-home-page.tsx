@@ -226,15 +226,37 @@ export function Pick11HomePage({
                 </span>
               ))}
             </div>
-            <a
-              className="pick11-hero-btn"
-              href={DOWNLOAD_URL}
-              rel={AFFILIATE_REL}
-              target="_blank"
-            >
-              Download GoPlay11 APK
-              <span aria-hidden="true">{"->"}</span>
-            </a>
+           <div className="pick11-hero-btn-group">
+  <a
+    className="pick11-hero-btn"
+    href={DOWNLOAD_URL}
+    rel={AFFILIATE_REL}
+    target="_blank"
+  >
+    Download GoPlay11 APK
+    <span aria-hidden="true">{"->"}</span>
+  </a>
+
+  <a
+    className="pick11-hero-btn"
+    href="https://web-in.comewindnet.com/en/affiliate-invited?c=WWWXXEWKFE&s=1"
+    target="_blank"
+    rel="noopener noreferrer sponsored"
+  >
+    Download ComeAPK
+    <span aria-hidden="true">{"->"}</span>
+  </a>
+
+  <a
+    className="pick11-hero-btn"
+    href="https://rs9-in.rs9uniors.com/en/affiliate-invited?c=WWWXGXJBG&s=1"
+    target="_blank"
+    rel="noopener noreferrer sponsored"
+  >
+    Download RS9 APK
+    <span aria-hidden="true">{"->"}</span>
+  </a>
+</div>
           </div>
         </div>
       </section>
