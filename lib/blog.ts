@@ -30,6 +30,7 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
 
+
   {
   slug: "goplay11-apk-main-features-explained",
   title: "What Are the Main Features of the GoPlay11 APK?",

@@ -288,6 +288,137 @@ export function Pick11HomePage({
               Learn more about GoPlay 11 <span aria-hidden="true">{"->"}</span>
             </a>
           </div>
+
+          {/* --- Added content below (existing content above is unchanged) --- */}
+          <div className="pick11-gopay-extended">
+            <h3>How the GoPlay11 Apk Works</h3>
+            <p>
+              Once you install the GoPlay11 apk on your phone, the app walks you through
+              a short signup process before dropping you straight into the match lobby.
+              From there, everything revolves around the fixture calendar: pick an
+              upcoming cricket match, check the squad list for both teams, and start
+              building your fantasy XI within the given budget, which is the core loop
+              the GoPlay11 apk is built around. The interface is designed to feel
+              familiar even if you have never used a fantasy sports app before, with
+              clear labels for player roles, credit values, and selected team slots.
+            </p>
+            <p>
+              What sets the experience apart is how much of the decision-making stays in
+              your hands. There is no automated team suggestion pushing you toward a
+              particular lineup. You choose every player, every captain, and every
+              strategy call yourself, which is part of why so many users describe
+              fantasy cricket as a game of preparation rather than luck.
+            </p>
+
+            <h3>Installing the Apk the Right Way</h3>
+            <p>
+              Because the GoPlay11 apk is not distributed through the Play Store,
+              installation happens a little differently than a typical app download.
+              After downloading the file from the official website, your phone will
+              likely ask for permission to install apps from outside the Play Store.
+              This is a standard Android security step, not a warning sign specific to
+              this app, but it is still worth pausing to confirm the source before
+              continuing.
+            </p>
+            <p>
+              Once installation finishes, opening the app for the first time takes you
+              through account verification, usually a phone number and a quick OTP
+              check. This step matters because it protects your account and makes sure
+              winnings can be withdrawn to the right person later. Skipping ahead or
+              using someone else&apos;s number to sign up tends to cause problems down
+              the line, so it is worth taking the extra minute to get this right. Anyone
+              comparing where to get the GoPlay11 apk should also stick to the official
+              download link rather than a random file-sharing site, since that is the
+              safest way to avoid a tampered or outdated version.
+            </p>
+
+            <h3>Building a Team That Actually Reflects Match Conditions</h3>
+            <p>
+              New players sometimes treat team selection as a popularity contest,
+              picking whichever players have the biggest reputation. Experienced fantasy
+              cricket players tend to look past reputation and focus on recent form,
+              pitch behavior, and how a player has performed against the specific
+              opposition in the past. A batsman in poor recent form is rarely a safer
+              pick than a slightly less famous player who has been scoring consistently
+              over the last few matches.
+            </p>
+            <p>
+              Budget management plays an equally important role. Spending too much on
+              one or two premium picks often leaves weak options everywhere else in the
+              lineup. A more balanced approach, with a mix of a couple of strong picks
+              and several dependable mid-range players, tends to hold up better across a
+              full tournament than a lineup built entirely around star power.
+            </p>
+
+            <h3>Tracking Matches in Real Time</h3>
+            <p>
+              One of the more satisfying parts of using the GoPlay11 apk is watching
+              your team&apos;s score update as the actual match unfolds. Every run,
+              wicket, and catch feeds directly into your fantasy points, which turns
+              even a fairly one-sided match into something worth paying close attention
+              to. This live tracking is one of the features players mention most often
+              when explaining why they keep coming back match after match.
+            </p>
+            <p>
+              Notifications for milestones, wickets, and contest results also help you
+              stay updated without needing to keep the app open the entire time a match
+              is running, which is useful for anyone trying to follow a game while still
+              going about their day.
+            </p>
+
+            <h3>Withdrawals and Account Safety</h3>
+            <p>
+              Winnings are only useful if getting them out of the app is
+              straightforward, and this is an area where a lot of users pay close
+              attention before committing to a platform. Inside the GoPlay11 apk, a
+              verified bank account linked to your profile is generally required before
+              any withdrawal request can be processed, which is a standard safeguard
+              against fraudulent claims rather than a hurdle designed to slow you down.
+            </p>
+            <p>
+              Keeping your account details accurate and up to date makes this process
+              smoother. Users who wait until their first big win to update their bank
+              details often run into unnecessary delays, so it is worth handling this
+              step early rather than as an afterthought.
+            </p>
+
+            <h3>Why the Format Keeps Growing in Popularity</h3>
+            <p>
+              Fantasy cricket has grown well beyond a niche hobby largely because it
+              rewards something fans already have: knowledge of the sport. Every fixture
+              becomes an opportunity to apply that knowledge directly, rather than
+              simply watching from the sidelines. For a country where cricket
+              conversations happen constantly, whether at work, at home, or among
+              friends, turning that existing passion into an interactive format is a
+              natural fit.
+            </p>
+            <p>
+              The GoPlay11 apk leans into this by keeping its core experience focused:
+              pick a match, build a team, track it live, and see how your decisions
+              played out. There is no unnecessary complexity layered on top, which
+              matters for casual fans and serious players alike. For many users,
+              downloading the GoPlay11 apk is simply the fastest way to turn a match
+              they were already going to watch into something a little more engaging.
+            </p>
+
+            <h3>Playing Responsibly</h3>
+            <p>
+              Like any skill-based format involving real money, it helps to set
+              boundaries before you start playing on the GoPlay11 apk. Deciding on a
+              comfortable budget for contest entries ahead of time, rather than
+              adjusting it match by match based on emotion, tends to lead to a much
+              healthier long-term relationship with the game. Treating each match as its
+              own contest, rather than chasing losses from a previous one, is a habit
+              that experienced players consistently mention as important.
+            </p>
+            <p>
+              Taking breaks between matches, especially during a packed tournament
+              schedule, also helps keep the experience enjoyable rather than stressful.
+              Fantasy cricket is meant to add excitement to matches you are already
+              following, not become a source of pressure.
+            </p>
+          </div>
+          {/* --- End of added content --- */}
         </div>
       </section>
 
