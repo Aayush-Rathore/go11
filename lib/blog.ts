@@ -112,7 +112,7 @@ export const BLOG_POSTS: BlogPost[] = [
     {
       heading: "Why GoPlay11 Uses APK Distribution",
       paragraphs: [
-        'For a platform like <a class="text-link" href="https://gopay11apk.com/goplay-11">Goplay11</a>, APK distribution isn\'t a workaround — it\'s the practical, standard model for fantasy sports apps operating in India. Direct distribution lets the platform push updates faster, keep the install size lean, and avoid the category restrictions that would otherwise block it from a traditional app store.',
+        'For a platform like <a class="text-link" href="https://gopay11apk.com/goplay-11">Goplay 11</a>, APK distribution isn\'t a workaround — it\'s the practical, standard model for fantasy sports apps operating in India. Direct distribution lets the platform push updates faster, keep the install size lean, and avoid the category restrictions that would otherwise block it from a traditional app store.',
         'From a user\'s perspective, the process is straightforward once you understand it: visit the official download page, allow installation from a trusted source, and install. The <a class="text-link" href="/download">Download GoPlay11 APK</a> page walks through each of these steps directly, so there\'s no guesswork involved.',
         'After installation, the day-to-day experience isn\'t any different from a Play Store app — you open it, log in through the GoPlay11 login and register flow, and use it normally. The only real difference happened during setup, not during actual use.',
       ],
@@ -311,7 +311,7 @@ export const BLOG_POSTS: BlogPost[] = [
     {
       heading: "Conclusion",
       paragraphs: [
-        'Taken together, these features explain why the <a class="text-link" href="https://gopay11apk.com/goplay-11">Goplay11 apk</a> has found a steady user base among Android fantasy cricket players. It\'s light, fast, secure, and doesn\'t overcomplicate the core experience of building a team and following a live match — while still covering the practical essentials like withdrawal transparency, contest variety, and responsible play support.',
+        'Taken together, these features explain why the <a class="text-link" href="https://gopay11apk.com/goplay-11">Goplay 11 apk</a> has found a steady user base among Android fantasy cricket players. It\'s light, fast, secure, and doesn\'t overcomplicate the core experience of building a team and following a live match — while still covering the practical essentials like withdrawal transparency, contest variety, and responsible play support.',
         'If you\'re deciding whether to install it, the best next step is to walk through the <a class="text-link" href="/how-to-play">How to Play</a> guide once you\'re set up, so you can put these features to use from your very first contest rather than learning them one at a time through trial and error.',
       ],
     },
@@ -416,7 +416,7 @@ export const BLOG_POSTS: BlogPost[] = [
       paragraphs: [
         "Since GoPlay11 isn't always available on mainstream app stores, most users install it through the GoPlay11 APK from the official website — a common approach among online fantasy games that involve real-money contests.",
         "To get set up: visit the official GoPlay11 site, download the latest GoPlay11 APK, and allow installation from unknown sources when Android prompts you (a one-time setting for any sideloaded app, not unique to GoPlay11 apk).",
-        "Once the Goplay11 apk is installed, register your account, complete KYC, and you're ready to join a contest. Stick to the official source for the GoPlay11 APK — third-party mirrors sometimes carry outdated or altered versions of the goplay11 apk that put your account at risk.",
+        "Once the Goplay11 apk is installed, register your account, complete KYC, and you're ready to join a contest. Stick to the official source for the GoPlay11 APK — third-party mirrors sometimes carry outdated or altered versions of the goplay 11 apk that put your account at risk.",
       ],
     },
     {
