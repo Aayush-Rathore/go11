@@ -249,7 +249,7 @@ export function Pick11HomePage({
 
   <a
     className="pick11-hero-btn"
-    href="https://rs9-in.rs9uniors.com/en/affiliate-invited?c=WWWXGXJBG&s=1"
+    href="https://rs9-in.rs9uniors.com/en/affiliate-invited?c=WWWX24JK2J&s=1"
     target="_blank"
     rel="noopener noreferrer sponsored"
   >
