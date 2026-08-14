@@ -80,8 +80,7 @@ export function SiteHeader() {
 
         <a
           className="btn btn-primary btn-compact header-cta"
-          href={AFFILIATE_LINK}
-          rel={AFFILIATE_REL}
+          href="https://web-in.goplayspring.com/en/affiliate-invited?c=WWWX25FE9G&s=1"
           target="_blank"
         >
           Download GoPlay11 APK
